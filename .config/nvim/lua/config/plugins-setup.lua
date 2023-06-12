@@ -44,9 +44,10 @@ return packer.startup(function(use)
 	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 
 	use("szw/vim-maximizer") -- maximizes and restores current window
-
+	--
 	-- essential plugins
-	use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
+	-- use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
+	use("kylechui/nvim-surround")
 	use("inkarkat/vim-ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
 
 	-- commenting with gc
@@ -69,7 +70,7 @@ return packer.startup(function(use)
 	use("hrsh7th/nvim-cmp") -- completion plugin
 	use("hrsh7th/cmp-buffer") -- source for text in buffer
 	use("hrsh7th/cmp-path") -- source for file system paths
-
+	use("ray-x/lsp_signature.nvim") -- show all kind of info for function a classes
 	-- snippets
 	use("L3MON4D3/LuaSnip") -- snippet engine
 	use("saadparwaiz1/cmp_luasnip") -- for autocompletion
