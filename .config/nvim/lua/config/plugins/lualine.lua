@@ -3,7 +3,7 @@ if not status then
 	return
 end
 
-local ayu = require("lualine.themes.everforest")
+local ayu = require("lualine.themes.ayu_mirage")
 
 lualine.setup({
 	options = {
