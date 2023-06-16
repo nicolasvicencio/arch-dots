@@ -32,22 +32,38 @@ return packer.startup(function(use)
 	use("wbthomason/packer.nvim")
 
 	use("tpope/vim-fugitive") -- git integrations
+
 	use("windwp/nvim-ts-autotag") -- autotag
+
 	use("mg979/vim-visual-multi") -- multicursors
+
+	use("ap/vim-buftabline") -- tab buffers
+
 	-- use("Pocco81/auto-save.nvim")
+	--
 	use("easymotion/vim-easymotion") -- move much faster
+
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
-	use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
+	-- Themes
+	use("bluz71/vim-nightfly-guicolors")
 	use("Shatur/neovim-ayu")
+	use("romgrk/doom-one.vim")
+	use("rebelot/kanagawa.nvim")
+	use("olimorris/onedarkpro.nvim")
+	use("EdenEast/nightfox.nvim")
+	use("sainnhe/sonokai")
+	use("sainnhe/everforest")
+	use("folke/tokyonight.nvim")
+	use("catppuccin/nvim")
 
 	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 
 	use("szw/vim-maximizer") -- maximizes and restores current window
 	--
 	-- essential plugins
-	-- use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
-	use("kylechui/nvim-surround")
+	use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
+	-- use("kylechui/nvim-surround")
 	use("inkarkat/vim-ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
 
 	-- commenting with gc

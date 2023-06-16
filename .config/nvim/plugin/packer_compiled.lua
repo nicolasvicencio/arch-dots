@@ -104,6 +104,16 @@ _G.packer_plugins = {
     path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["doom-one.vim"] = {
+    loaded = true,
+    path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/doom-one.vim",
+    url = "https://github.com/romgrk/doom-one.vim"
+  },
+  everforest = {
+    loaded = true,
+    path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/everforest",
+    url = "https://github.com/sainnhe/everforest"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -113,6 +123,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
+  ["kanagawa.nvim"] = {
+    loaded = true,
+    path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
+    url = "https://github.com/rebelot/kanagawa.nvim"
   },
   ["lsp_signature.nvim"] = {
     loaded = true,
@@ -154,10 +169,20 @@ _G.packer_plugins = {
     path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/neovim-ayu",
     url = "https://github.com/Shatur/neovim-ayu"
   },
+  ["nightfox.nvim"] = {
+    loaded = true,
+    path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
+    url = "https://github.com/EdenEast/nightfox.nvim"
+  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
     url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+  },
+  nvim = {
+    loaded = true,
+    path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/nvim",
+    url = "https://github.com/catppuccin/nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -173,11 +198,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
-  },
-  ["nvim-surround"] = {
-    loaded = true,
-    path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/nvim-surround",
-    url = "https://github.com/kylechui/nvim-surround"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -199,6 +219,11 @@ _G.packer_plugins = {
     path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
+  ["onedarkpro.nvim"] = {
+    loaded = true,
+    path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/onedarkpro.nvim",
+    url = "https://github.com/olimorris/onedarkpro.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -208,6 +233,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  sonokai = {
+    loaded = true,
+    path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/sonokai",
+    url = "https://github.com/sainnhe/sonokai"
   },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
@@ -219,6 +249,11 @@ _G.packer_plugins = {
     path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
+  },
   ["typescript.nvim"] = {
     loaded = true,
     path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/typescript.nvim",
@@ -228,6 +263,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/vim-ReplaceWithRegister",
     url = "https://github.com/inkarkat/vim-ReplaceWithRegister"
+  },
+  ["vim-buftabline"] = {
+    loaded = true,
+    path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/vim-buftabline",
+    url = "https://github.com/ap/vim-buftabline"
   },
   ["vim-easymotion"] = {
     loaded = true,
@@ -248,6 +288,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/vim-nightfly-guicolors",
     url = "https://github.com/bluz71/vim-nightfly-guicolors"
+  },
+  ["vim-surround"] = {
+    loaded = true,
+    path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/vim-surround",
+    url = "https://github.com/tpope/vim-surround"
   },
   ["vim-tmux-navigator"] = {
     loaded = true,
