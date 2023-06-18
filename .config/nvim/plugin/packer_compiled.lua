@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["ccc.nvim"] = {
+    loaded = true,
+    path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/ccc.nvim",
+    url = "https://github.com/uga-rosa/ccc.nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -164,6 +169,11 @@ _G.packer_plugins = {
     path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["material.nvim"] = {
+    loaded = true,
+    path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/material.nvim",
+    url = "https://github.com/marko-cerovac/material.nvim"
+  },
   ["neovim-ayu"] = {
     loaded = true,
     path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/neovim-ayu",
@@ -194,10 +204,20 @@ _G.packer_plugins = {
     path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-colorizer.lua"] = {
+    loaded = true,
+    path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
+    url = "https://github.com/norcalli/nvim-colorizer.lua"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-test"] = {
+    loaded = true,
+    path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/nvim-test",
+    url = "https://github.com/klen/nvim-test"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -218,6 +238,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
+  },
+  ["oh-lucy.nvim"] = {
+    loaded = true,
+    path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/oh-lucy.nvim",
+    url = "https://github.com/yazeed1s/oh-lucy.nvim"
   },
   ["onedarkpro.nvim"] = {
     loaded = true,
@@ -269,15 +294,15 @@ _G.packer_plugins = {
     path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/vim-ReplaceWithRegister",
     url = "https://github.com/inkarkat/vim-ReplaceWithRegister"
   },
-  ["vim-easymotion"] = {
-    loaded = true,
-    path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/vim-easymotion",
-    url = "https://github.com/easymotion/vim-easymotion"
-  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-illuminate"] = {
+    loaded = true,
+    path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/vim-illuminate",
+    url = "https://github.com/RRethy/vim-illuminate"
   },
   ["vim-maximizer"] = {
     loaded = true,

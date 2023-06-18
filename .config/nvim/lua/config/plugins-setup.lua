@@ -40,12 +40,18 @@ return packer.startup(function(use)
 	-- use("ap/vim-buftabline") -- tab buffers
 
 	-- use("Pocco81/auto-save.nvim")
-	--
-	use("easymotion/vim-easymotion") -- move much faster
 
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
 	use("napmn/react-extract.nvim") -- This remove all the component code and create a new file and.. its amazing..
+
+	use("norcalli/nvim-colorizer.lua") -- colorize the... colors
+
+	use("uga-rosa/ccc.nvim") -- colorpicker
+
+	use("RRethy/vim-illuminate") -- iluminate words and references in the current file <a-p> <a-n> to move
+
+	use("klen/nvim-test") -- testing
 
 	-- Themes
 	use("bluz71/vim-nightfly-guicolors")
@@ -58,6 +64,8 @@ return packer.startup(function(use)
 	use("sainnhe/everforest")
 	use("folke/tokyonight.nvim")
 	use("catppuccin/nvim")
+	use("yazeed1s/oh-lucy.nvim")
+	use("marko-cerovac/material.nvim")
 
 	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 

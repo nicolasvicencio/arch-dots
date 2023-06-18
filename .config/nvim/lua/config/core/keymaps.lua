@@ -56,3 +56,8 @@ keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current c
 
 keymap.set({ "v" }, "<Leader>re", require("react-extract").extract_to_new_file)
 keymap.set({ "v" }, "<Leader>rc", require("react-extract").extract_to_current_file)
+
+keymap.set("n", "<leader>cp", "<cmd>CccPick<CR>") -- ColorPicker
+
+keymap.set("n", "<leader>tf", "<cmd>TestFile<CR>")
+keymap.set("n", "<leader>tc", "<cmd>TestNearest<CR>")
