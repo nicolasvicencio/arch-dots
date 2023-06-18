@@ -234,6 +234,11 @@ _G.packer_plugins = {
     path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["react-extract.nvim"] = {
+    loaded = true,
+    path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/react-extract.nvim",
+    url = "https://github.com/napmn/react-extract.nvim"
+  },
   sonokai = {
     loaded = true,
     path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/sonokai",
@@ -263,11 +268,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/vim-ReplaceWithRegister",
     url = "https://github.com/inkarkat/vim-ReplaceWithRegister"
-  },
-  ["vim-buftabline"] = {
-    loaded = true,
-    path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/vim-buftabline",
-    url = "https://github.com/ap/vim-buftabline"
   },
   ["vim-easymotion"] = {
     loaded = true,

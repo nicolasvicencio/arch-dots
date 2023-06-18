@@ -7,6 +7,10 @@ keymap.set("i", "jk", "<ESC>")
 -- clear search highlights
 keymap.set("n", "<Esc>", ":nohl<CR>")
 
+-- move lines with Alt key
+keymap.set("n", "<A-j>", ":m .+1<CR>==")
+keymap.set("n", "<A-k>", ":m .-2<CR>==")
+
 -- moving in insert mode
 keymap.set("i", "<C-h", "<Left>")
 keymap.set("i", "<C-l", "<Rigth>")
@@ -47,3 +51,6 @@ keymap.set("n", "<leader>gc", "<cmd>Telescope git_commits<cr>") -- list all git 
 keymap.set("n", "<leader>gfc", "<cmd>Telescope git_bcommits<cr>") -- list git commits for current file/buffer (use <cr> to checkout) ["gfc" for git file commits]
 keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>") -- list git branches (use <cr> to checkout) ["gb" for git branch]
 keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current changes per file with diff preview ["gs" for git status]
+
+keymap.set({ "v" }, "<Leader>re", require("react-extract").extract_to_new_file)
+keymap.set({ "v" }, "<Leader>rc", require("react-extract").extract_to_current_file)

@@ -37,13 +37,15 @@ return packer.startup(function(use)
 
 	use("mg979/vim-visual-multi") -- multicursors
 
-	use("ap/vim-buftabline") -- tab buffers
+	-- use("ap/vim-buftabline") -- tab buffers
 
 	-- use("Pocco81/auto-save.nvim")
 	--
 	use("easymotion/vim-easymotion") -- move much faster
 
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
+
+	use("napmn/react-extract.nvim") -- This remove all the component code and create a new file and.. its amazing..
 
 	-- Themes
 	use("bluz71/vim-nightfly-guicolors")
