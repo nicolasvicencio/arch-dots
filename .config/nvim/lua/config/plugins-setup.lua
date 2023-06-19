@@ -39,8 +39,6 @@ return packer.startup(function(use)
 
 	-- use("ap/vim-buftabline") -- tab buffers
 
-	-- use("Pocco81/auto-save.nvim")
-
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
 	use("napmn/react-extract.nvim") -- This remove all the component code and create a new file and.. its amazing..
@@ -52,6 +50,8 @@ return packer.startup(function(use)
 	use("RRethy/vim-illuminate") -- iluminate words and references in the current file <a-p> <a-n> to move
 
 	use("klen/nvim-test") -- testing
+
+	use("xiyaowong/transparent.nvim") -- :TransparentEnable to activate
 
 	-- Themes
 	use("bluz71/vim-nightfly-guicolors")
@@ -73,7 +73,6 @@ return packer.startup(function(use)
 	--
 	-- essential plugins
 	use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
-	-- use("kylechui/nvim-surround")
 	use("inkarkat/vim-ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
 
 	-- commenting with gc
@@ -130,6 +129,14 @@ return packer.startup(function(use)
 		run = function()
 			local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
 			ts_update()
+		end,
+	})
+
+	use({
+		"startup-nvim/startup.nvim",
+		requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+		config = function()
+			require("startup").setup()
 		end,
 	})
 
