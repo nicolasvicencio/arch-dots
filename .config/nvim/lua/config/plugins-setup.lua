@@ -35,13 +35,11 @@ return packer.startup(function(use)
 
 	use("windwp/nvim-ts-autotag") -- autotag
 
+	use("romgrk/barbar.nvim") -- fancy tabs
+
 	use("mg979/vim-visual-multi") -- multicursors
 
-	-- use("ap/vim-buftabline") -- tab buffers
-
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
-
-	use("napmn/react-extract.nvim") -- This remove all the component code and create a new file and.. its amazing..
 
 	use("norcalli/nvim-colorizer.lua") -- colorize the... colors
 
@@ -58,8 +56,6 @@ return packer.startup(function(use)
 	use("kdheepak/lazygit.nvim") -- gui for git things
 
 	use("edluffy/hologram.nvim") -- render images in nvim, with kitty
-
-	use("nvim-colorizer.lua") -- color the hex
 
 	use("mbbill/undotree")
 
@@ -78,6 +74,7 @@ return packer.startup(function(use)
 	use("marko-cerovac/material.nvim")
 	use("shaunsingh/nord.nvim")
 	use("rose-pine/neovim")
+	use("rmehri01/onenord.nvim")
 
 	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 

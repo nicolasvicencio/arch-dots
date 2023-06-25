@@ -1,5 +1,6 @@
 vim.g.mapleader = " "
 local keymap = vim.keymap
+local opts = { noremap = true, silent = true }
 
 -- use jk to exit insert mode
 keymap.set("i", "jk", "<ESC>")
@@ -67,10 +68,11 @@ keymap.set("n", "<leader>gfc", "<cmd>Telescope git_bcommits<cr>") -- list git co
 keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>") -- list git branches (use <cr> to checkout) ["gb" for git branch]
 keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current changes per file with diff preview ["gs" for git status]
 
-keymap.set({ "v" }, "<Leader>re", require("react-extract").extract_to_new_file)
-keymap.set({ "v" }, "<Leader>rc", require("react-extract").extract_to_current_file)
-
 keymap.set("n", "<leader>cp", "<cmd>CccPick<CR>") -- ColorPicker
 
 keymap.set("n", "<leader>tf", "<cmd>TestFile<CR>")
 keymap.set("n", "<leader>tc", "<cmd>TestNearest<CR>")
+
+keymap.set("n", "<A-1>", "<Cmd>BufferPrevious<CR>", opts)
+keymap.set("n", "<A-2>", "<Cmd>BufferNext<CR>", opts)
+keymap.set("n", "<A-q>", "<Cmd>BufferClose<CR>", opts)
