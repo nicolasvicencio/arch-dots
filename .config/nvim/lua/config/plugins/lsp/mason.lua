@@ -29,6 +29,7 @@ mason_lspconfig.setup({
 		"jsonls",
 		"lua_ls",
 		"emmet_ls",
+		"astro",
 	},
 	-- auto-install configured servers (with lspconfig)
 	automatic_installation = true, -- not the same as ensure_installed
@@ -38,6 +39,7 @@ mason_null_ls.setup({
 	-- list of formatters & linters for mason to install
 	ensure_installed = {
 		"prettier", -- ts/js formatter
+		"ts_standard",
 		"stylua", -- lua formatter
 		"eslint_d", -- ts/js linter
 	},

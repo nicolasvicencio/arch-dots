@@ -9,6 +9,7 @@ opt.tabstop = 2
 opt.shiftwidth = 2
 opt.expandtab = true
 opt.autoindent = true
+opt.smartindent = true
 
 opt.wrap = false
 
@@ -22,8 +23,12 @@ opt.signcolumn = "yes"
 opt.backspace = "indent,eol,start"
 
 opt.clipboard:append("unnamedplus")
+opt.wrap = false
+opt.scrolloff = 8
 
 opt.splitright = true
 opt.splitbelow = true
 
 opt.iskeyword:append("-")
+
+opt.fillchars:append({ eob = " " })

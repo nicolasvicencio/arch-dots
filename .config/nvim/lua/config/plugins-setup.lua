@@ -53,6 +53,16 @@ return packer.startup(function(use)
 
 	use("xiyaowong/transparent.nvim") -- :TransparentEnable to activate
 
+	use("farmergreg/vim-lastplace") -- put the cursor in the last place yeah very descriptive
+
+	use("kdheepak/lazygit.nvim") -- gui for git things
+
+	use("edluffy/hologram.nvim") -- render images in nvim, with kitty
+
+	use("nvim-colorizer.lua") -- color the hex
+
+	use("mbbill/undotree")
+
 	-- Themes
 	use("bluz71/vim-nightfly-guicolors")
 	use("Shatur/neovim-ayu")
@@ -66,6 +76,8 @@ return packer.startup(function(use)
 	use("catppuccin/nvim")
 	use("yazeed1s/oh-lucy.nvim")
 	use("marko-cerovac/material.nvim")
+	use("shaunsingh/nord.nvim")
+	use("rose-pine/neovim")
 
 	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 
@@ -129,6 +141,16 @@ return packer.startup(function(use)
 		run = function()
 			local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
 			ts_update()
+		end,
+	})
+	use({
+		"ahmedkhalf/project.nvim",
+		config = function()
+			require("project_nvim").setup({
+				-- your configuration comes here
+				-- or leave it empty to use the default settings
+				-- refer to the configuration section below
+			})
 		end,
 	})
 

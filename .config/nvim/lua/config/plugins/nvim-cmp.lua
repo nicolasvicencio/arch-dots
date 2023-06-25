@@ -39,8 +39,8 @@ cmp.setup({
 	-- sources for autocompletion
 	sources = cmp.config.sources({
 		{ name = "nvim_lsp", priority = 1000 }, -- lsp
-		-- { name = "buffer", priority = 800 }, -- text within current buffer
-		-- { name = "path", priority = 900 }, -- file system paths
+		{ name = "buffer", priority = 800 }, -- text within current buffer
+		{ name = "path", priority = 900 }, -- file system paths
 		{ name = "luasnip", priority = 2000 }, -- snippets
 	}),
 	-- configure lspkind for vs-code like icons
