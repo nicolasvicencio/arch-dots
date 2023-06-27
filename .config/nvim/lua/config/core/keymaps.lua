@@ -51,7 +51,8 @@ keymap.set("n", "<tab>", ":tabp<CR>") --  go to previous tab
 -- plugin keymaps
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
 -- nvim tree
-keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
+keymap.set("n", "<C-.>", ":NvimTreeToggle<CR>")
+keymap.set("n", "<leader>e", ":NvimTreeFocus<CR>")
 
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
@@ -76,3 +77,22 @@ keymap.set("n", "<leader>tc", "<cmd>TestNearest<CR>")
 keymap.set("n", "<A-1>", "<Cmd>BufferPrevious<CR>", opts)
 keymap.set("n", "<A-2>", "<Cmd>BufferNext<CR>", opts)
 keymap.set("n", "<A-q>", "<Cmd>BufferClose<CR>", opts)
+
+local mark = require("harpoon.mark")
+local ui = require("harpoon.ui")
+
+vim.keymap.set("n", "<leader>a", mark.add_file)
+vim.keymap.set("n", "<A-e>", ui.toggle_quick_menu)
+
+vim.keymap.set("n", "<A-u>", function()
+	ui.nav_file(1)
+end)
+vim.keymap.set("n", "<A-i>", function()
+	ui.nav_file(2)
+end)
+vim.keymap.set("n", "<A-o>", function()
+	ui.nav_file(3)
+end)
+vim.keymap.set("n", "<A-p>", function()
+	ui.nav_file(4)
+end)

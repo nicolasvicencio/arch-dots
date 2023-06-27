@@ -35,8 +35,6 @@ return packer.startup(function(use)
 
 	use("windwp/nvim-ts-autotag") -- autotag
 
-	use("romgrk/barbar.nvim") -- fancy tabs
-
 	use("mg979/vim-visual-multi") -- multicursors
 
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
@@ -57,14 +55,16 @@ return packer.startup(function(use)
 
 	use("edluffy/hologram.nvim") -- render images in nvim, with kitty
 
-	use("mbbill/undotree")
+	use("mbbill/undotree") -- branch your changes in the current file
+
+	use("ThePrimeagen/harpoon") -- move between file blazingly fast
+
+	use("lukas-reineke/indent-blankline.nvim") -- indent lines
 
 	-- Themes
 	use("bluz71/vim-nightfly-guicolors")
 	use("Shatur/neovim-ayu")
-	use("romgrk/doom-one.vim")
 	use("rebelot/kanagawa.nvim")
-	use("olimorris/onedarkpro.nvim")
 	use("EdenEast/nightfox.nvim")
 	use("sainnhe/sonokai")
 	use("sainnhe/everforest")
@@ -75,6 +75,7 @@ return packer.startup(function(use)
 	use("shaunsingh/nord.nvim")
 	use("rose-pine/neovim")
 	use("rmehri01/onenord.nvim")
+	use("navarasu/onedark.nvim")
 
 	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 

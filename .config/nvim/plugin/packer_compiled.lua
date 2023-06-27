@@ -84,11 +84,6 @@ _G.packer_plugins = {
     path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  ["barbar.nvim"] = {
-    loaded = true,
-    path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/barbar.nvim",
-    url = "https://github.com/romgrk/barbar.nvim"
-  },
   ["ccc.nvim"] = {
     loaded = true,
     path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/ccc.nvim",
@@ -114,11 +109,6 @@ _G.packer_plugins = {
     path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  ["doom-one.vim"] = {
-    loaded = true,
-    path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/doom-one.vim",
-    url = "https://github.com/romgrk/doom-one.vim"
-  },
   everforest = {
     loaded = true,
     path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/everforest",
@@ -134,10 +124,20 @@ _G.packer_plugins = {
     path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  harpoon = {
+    loaded = true,
+    path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/harpoon",
+    url = "https://github.com/ThePrimeagen/harpoon"
+  },
   ["hologram.nvim"] = {
     loaded = true,
     path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/hologram.nvim",
     url = "https://github.com/edluffy/hologram.nvim"
+  },
+  ["indent-blankline.nvim"] = {
+    loaded = true,
+    path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
   ["kanagawa.nvim"] = {
     loaded = true,
@@ -269,10 +269,10 @@ _G.packer_plugins = {
     path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/oh-lucy.nvim",
     url = "https://github.com/yazeed1s/oh-lucy.nvim"
   },
-  ["onedarkpro.nvim"] = {
+  ["onedark.nvim"] = {
     loaded = true,
-    path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/onedarkpro.nvim",
-    url = "https://github.com/olimorris/onedarkpro.nvim"
+    path = "/home/nicodev/.local/share/nvim/site/pack/packer/start/onedark.nvim",
+    url = "https://github.com/navarasu/onedark.nvim"
   },
   ["onenord.nvim"] = {
     loaded = true,
