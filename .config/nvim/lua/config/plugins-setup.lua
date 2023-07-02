@@ -31,36 +31,6 @@ return packer.startup(function(use)
 	-- packer can manage itself
 	use("wbthomason/packer.nvim")
 
-	use("tpope/vim-fugitive") -- git integrations
-
-	use("windwp/nvim-ts-autotag") -- autotag
-
-	use("mg979/vim-visual-multi") -- multicursors
-
-	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
-
-	use("norcalli/nvim-colorizer.lua") -- colorize the... colors
-
-	use("uga-rosa/ccc.nvim") -- colorpicker
-
-	use("RRethy/vim-illuminate") -- iluminate words and references in the current file <a-p> <a-n> to move
-
-	use("klen/nvim-test") -- testing
-
-	use("xiyaowong/transparent.nvim") -- :TransparentEnable to activate
-
-	use("farmergreg/vim-lastplace") -- put the cursor in the last place yeah very descriptive
-
-	use("kdheepak/lazygit.nvim") -- gui for git things
-
-	use("edluffy/hologram.nvim") -- render images in nvim, with kitty
-
-	use("mbbill/undotree") -- branch your changes in the current file
-
-	use("ThePrimeagen/harpoon") -- move between file blazingly fast
-
-	use("lukas-reineke/indent-blankline.nvim") -- indent lines
-
 	-- Themes
 	use("bluz71/vim-nightfly-guicolors")
 	use("Shatur/neovim-ayu")
@@ -77,10 +47,41 @@ return packer.startup(function(use)
 	use("rmehri01/onenord.nvim")
 	use("navarasu/onedark.nvim")
 
-	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
+	use("xiyaowong/transparent.nvim") -- :TransparentEnable to activate
 
+	-- git integration
+	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
+	use("tpope/vim-fugitive") -- git integrations
+	use("kdheepak/lazygit.nvim") -- gui for git things
+	use("mbbill/undotree") -- branch your changes in the current file
+
+	-- Web utils
+	use("mg979/vim-visual-multi") -- multicursors
+	use("RRethy/vim-illuminate") -- iluminate words and references in the current file <a-p> <a-n> to move
+
+	-- AutoClosing
+	use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
+	use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
+
+	-- Utils
+	use("farmergreg/vim-lastplace") -- put the cursor in the last place yeah very descriptive
+
+	-- Colors
+	use("norcalli/nvim-colorizer.lua") -- colorize the... colors
+	use("uga-rosa/ccc.nvim") -- colorpicker
+
+	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
+
+	use("klen/nvim-test") -- testing
+
+	-- Movements
+	use("ThePrimeagen/harpoon") -- move between file blazingly fast
+
+	-- visuals
+	use("lukas-reineke/indent-blankline.nvim") -- indent lines
+	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 	use("szw/vim-maximizer") -- maximizes and restores current window
-	--
+
 	-- essential plugins
 	use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
 	use("inkarkat/vim-ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
@@ -106,6 +107,8 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-buffer") -- source for text in buffer
 	use("hrsh7th/cmp-path") -- source for file system paths
 	use("ray-x/lsp_signature.nvim") -- show all kind of info for function a classes
+	use("Exafunction/codeium.vim") -- copilot for poor people
+
 	-- snippets
 	use("L3MON4D3/LuaSnip") -- snippet engine
 	use("saadparwaiz1/cmp_luasnip") -- for autocompletion
@@ -159,13 +162,6 @@ return packer.startup(function(use)
 			require("startup").setup()
 		end,
 	})
-
-	-- auto closing
-	use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
-	use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
-
-	-- git integration
-	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
 	if packer_bootstrap then
 		require("packer").sync()

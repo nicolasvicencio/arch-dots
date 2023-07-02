@@ -3,8 +3,7 @@ if not status then
 	return
 end
 
-local ayu = require("lualine.themes.ayu_mirage")
-
+local ayu = require("lualine.themes.ayu")
 
 lualine.setup({
 	options = {
