@@ -40,7 +40,6 @@ return packer.startup(function(use)
 	use("sainnhe/everforest")
 	use("folke/tokyonight.nvim")
 	use("catppuccin/nvim")
-	use("yazeed1s/oh-lucy.nvim")
 	use("marko-cerovac/material.nvim")
 	use("shaunsingh/nord.nvim")
 	use("rose-pine/neovim")
@@ -51,7 +50,6 @@ return packer.startup(function(use)
 
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
-	use("tpope/vim-fugitive") -- git integrations
 	use("kdheepak/lazygit.nvim") -- gui for git things
 	use("mbbill/undotree") -- branch your changes in the current file
 
@@ -162,6 +160,13 @@ return packer.startup(function(use)
 			require("startup").setup()
 		end,
 	})
+
+  use {
+  'VonHeikemen/fine-cmdline.nvim',
+  requires = {
+    {'MunifTanjim/nui.nvim'}
+  }
+}
 
 	if packer_bootstrap then
 		require("packer").sync()

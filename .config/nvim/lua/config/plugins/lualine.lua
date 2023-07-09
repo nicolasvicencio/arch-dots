@@ -3,11 +3,12 @@ if not status then
 	return
 end
 
-local ayu = require("lualine.themes.ayu")
+local ayu = require("lualine.themes.ayu_mirage")
+local cattpuccin = require("lualine.themes.catppuccin-frappe")
 
 lualine.setup({
 	options = {
-		theme = ayu,
+		theme = cattpuccin,
 	},
 	sections = {
 		lualine_a = { "mode" },
