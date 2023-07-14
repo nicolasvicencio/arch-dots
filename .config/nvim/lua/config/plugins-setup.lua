@@ -39,12 +39,14 @@ return packer.startup(function(use)
 	use("sainnhe/sonokai")
 	use("sainnhe/everforest")
 	use("folke/tokyonight.nvim")
-	use("catppuccin/nvim")
+	use({ "catppuccin/nvim", as = "catppuccin" })
 	use("marko-cerovac/material.nvim")
 	use("shaunsingh/nord.nvim")
 	use("rose-pine/neovim")
 	use("rmehri01/onenord.nvim")
 	use("navarasu/onedark.nvim")
+	use("w3barsi/barstrata.nvim")
+	use("sainnhe/edge")
 
 	use("xiyaowong/transparent.nvim") -- :TransparentEnable to activate
 
@@ -161,12 +163,12 @@ return packer.startup(function(use)
 		end,
 	})
 
-  use {
-  'VonHeikemen/fine-cmdline.nvim',
-  requires = {
-    {'MunifTanjim/nui.nvim'}
-  }
-}
+	use({
+		"VonHeikemen/fine-cmdline.nvim",
+		requires = {
+			{ "MunifTanjim/nui.nvim" },
+		},
+	})
 
 	if packer_bootstrap then
 		require("packer").sync()

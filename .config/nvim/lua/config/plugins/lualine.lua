@@ -4,7 +4,7 @@ if not status then
 end
 
 local ayu = require("lualine.themes.ayu_mirage")
-local cattpuccin = require("lualine.themes.catppuccin-frappe")
+local cattpuccin = require("lualine.themes.catppuccin-mocha")
 
 lualine.setup({
 	options = {

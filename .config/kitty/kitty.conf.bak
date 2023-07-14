@@ -3,7 +3,7 @@ enable_audio_bell no
 
 include color.ini
 
-font_family      FiraCode 
+font_family      JetBrainsMono
 font_size 			 9	
 
 disable_ligatures never
@@ -40,6 +40,6 @@ shell zsh
 
 
 # BEGIN_KITTY_THEME
-# Catppuccin-Mocha
+# Catppuccin-Frappe
 include current-theme.conf
 # END_KITTY_THEME

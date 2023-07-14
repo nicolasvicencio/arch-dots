@@ -6,6 +6,7 @@ opt.number = true
 
 -- disabling backup
 opt.backup = false
+opt.cmdheight = 0
 
 --tabs & indent
 opt.tabstop = 2
@@ -19,7 +20,7 @@ opt.wrap = false
 opt.ignorecase = true
 opt.smartcase = true
 
-opt.termguicolors = true
+-- opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
 
