@@ -11,6 +11,14 @@ alias l='lsd --group-dirs=first'
 alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
 alias cat='bat'
+alias theme='kitty +kitten themes'
+
+plugins=(
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+)
+
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Use powerline
 USE_POWERLINE="true"
@@ -27,3 +35,8 @@ export ANDROID_HOME=/home/nicodev/Android/Sdk
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+source ~/powerlevel10k/powerlevel10k.zsh-theme
+source /home/nicodev/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+
+
