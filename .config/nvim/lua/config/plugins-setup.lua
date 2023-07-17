@@ -65,6 +65,12 @@ return packer.startup(function(use)
 
 	-- Utils
 	use("farmergreg/vim-lastplace") -- put the cursor in the last place yeah very descriptive
+	use({
+		"VonHeikemen/fine-cmdline.nvim",
+		requires = {
+			{ "MunifTanjim/nui.nvim" },
+		},
+	})
 
 	-- Colors
 	use("norcalli/nvim-colorizer.lua") -- colorize the... colors
@@ -147,11 +153,7 @@ return packer.startup(function(use)
 	use({
 		"ahmedkhalf/project.nvim",
 		config = function()
-			require("project_nvim").setup({
-				-- your configuration comes here
-				-- or leave it empty to use the default settings
-				-- refer to the configuration section below
-			})
+			require("project_nvim").setup({})
 		end,
 	})
 
@@ -168,6 +170,14 @@ return packer.startup(function(use)
 		requires = {
 			{ "MunifTanjim/nui.nvim" },
 		},
+	})
+
+	use({
+		"akinsho/toggleterm.nvim",
+		tag = "*",
+		config = function()
+			require("toggleterm").setup()
+		end,
 	})
 
 	if packer_bootstrap then

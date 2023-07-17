@@ -71,6 +71,8 @@ keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current c
 
 keymap.set("n", "<leader>cp", "<cmd>CccPick<CR>") -- ColorPicker
 
+keymap.set("n", "<leader>/", "<cmd>ToggleTerm<CR>")
+
 keymap.set("n", "<leader>tf", "<cmd>TestFile<CR>")
 keymap.set("n", "<leader>tc", "<cmd>TestNearest<CR>")
 
@@ -96,3 +98,5 @@ end)
 vim.keymap.set("n", "<A-p>", function()
 	ui.nav_file(4)
 end)
+
+vim.api.nvim_set_keymap("n", ":", "<cmd>FineCmdline<CR>", { noremap = true })
