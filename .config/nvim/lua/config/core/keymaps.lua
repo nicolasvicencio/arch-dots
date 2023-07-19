@@ -15,14 +15,8 @@ keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv")
 keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv")
 keymap.set("n", "<C-d>", "<C-d>zz")
 keymap.set("n", "<C-u>", "<C-u>zz")
-keymap.set("n", "n", "nzzzv")
-keymap.set("n", "N", "Nzzzv")
 keymap.set("n", "J", "mzJ`z")
 keymap.set("x", "<leader>p", [["_dP]])
-
--- moving in insert mode
-keymap.set("i", "<C-h", "<Left>")
-keymap.set("i", "<C-l", "<Rigth>")
 
 --linw numbers
 keymap.set("n", "<leader>n", "<cmd> set nu! <CR>")
@@ -34,8 +28,11 @@ keymap.set("n", "x", '"_x')
 -- increment/decrement numbers
 keymap.set("n", "<leader>+", "<C-a>") -- increment
 keymap.set("n", "<leader>-", "<C-x>") -- decrement
+
+-- save and quit
 keymap.set("n", "<leader>w", ":w<CR>")
 keymap.set("n", "<leader>q", ":q<CR>")
+
 -- window management
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
 keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
@@ -50,6 +47,7 @@ keymap.set("n", "<tab>", ":tabp<CR>") --  go to previous tab
 
 -- plugin keymaps
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
+
 -- nvim tree
 keymap.set("n", "<C-.>", ":NvimTreeToggle<CR>")
 keymap.set("n", "<leader>e", ":NvimTreeFocus<CR>")
@@ -69,16 +67,8 @@ keymap.set("n", "<leader>gfc", "<cmd>Telescope git_bcommits<cr>") -- list git co
 keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>") -- list git branches (use <cr> to checkout) ["gb" for git branch]
 keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current changes per file with diff preview ["gs" for git status]
 
-keymap.set("n", "<leader>cp", "<cmd>CccPick<CR>") -- ColorPicker
-
-keymap.set("n", "<leader>/", "<cmd>ToggleTerm<CR>")
-
 keymap.set("n", "<leader>tf", "<cmd>TestFile<CR>")
 keymap.set("n", "<leader>tc", "<cmd>TestNearest<CR>")
-
-keymap.set("n", "<A-1>", "<Cmd>BufferPrevious<CR>", opts)
-keymap.set("n", "<A-2>", "<Cmd>BufferNext<CR>", opts)
-keymap.set("n", "<A-q>", "<Cmd>BufferClose<CR>", opts)
 
 local mark = require("harpoon.mark")
 local ui = require("harpoon.ui")
