@@ -52,12 +52,13 @@ return packer.startup(function(use)
 
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
-	use("kdheepak/lazygit.nvim") -- gui for git things
+	use("kdheepak/lazygit.nvim") -- gui for git thingsseu
 	use("mbbill/undotree") -- branch your changes in the current file
 
 	-- Web utils
 	use("mg979/vim-visual-multi") -- multicursors
 	use("RRethy/vim-illuminate") -- iluminate words and references in the current file <a-p> <a-n> to move
+	use("samodostal/image.nvim")
 
 	-- AutoClosing
 	use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
@@ -77,7 +78,7 @@ return packer.startup(function(use)
 	use("ThePrimeagen/harpoon") -- move between file blazingly fast
 
 	-- visuals
-	use("lukas-reineke/indent-blankline.nvim") -- indent lines
+	-- use("lukas-reineke/indent-blankline.nvim") -- indent lines
 	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 	use("szw/vim-maximizer") -- maximizes and restores current window
 
@@ -150,18 +151,19 @@ return packer.startup(function(use)
 	})
 
 	use({
-		"startup-nvim/startup.nvim",
-		requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
-		config = function()
-			require("startup").setup()
-		end,
-	})
-
-	use({
 		"VonHeikemen/fine-cmdline.nvim",
 		requires = {
 			{ "MunifTanjim/nui.nvim" },
 		},
+	})
+
+	use({
+		"laytan/tailwind-sorter.nvim",
+		requires = { "nvim-treesitter/nvim-treesitter", "nvim-lua/plenary.nvim" },
+		config = function()
+			require("tailwind-sorter").setup()
+		end,
+		run = "cd formatter && npm i && npm run build",
 	})
 
 	if packer_bootstrap then
