@@ -54,6 +54,7 @@ local plugins = {
 	"williamboman/mason-lspconfig.nvim", -- bridges gap b/w mason & lspconfig
 	"neovim/nvim-lspconfig", -- easily configure language servers
 	"hrsh7th/cmp-nvim-lsp", -- for autocompletion
+	"christoomey/vim-tmux-navigator",
 	{
 		"glepnir/lspsaga.nvim",
 		branch = "main",

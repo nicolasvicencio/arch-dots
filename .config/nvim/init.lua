@@ -3,7 +3,7 @@
 require("config.lazy")
 require("config.core.options")
 require("config.core.keymaps")
--- require("config.plugins.nvim-tree")
+require("config.plugins.nvim-tree")
 require("config.plugins.neotree")
 require("config.plugins.comment")
 require("config.plugins.lualine")

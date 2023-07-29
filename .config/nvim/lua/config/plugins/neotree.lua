@@ -4,6 +4,8 @@ if not setup then
 end
 
 neotree.setup({
+	enable_git_status = false,
+	close_if_last_window = true,
 	window = {
 		position = "right",
 		width = 30,
@@ -16,6 +18,11 @@ neotree.setup({
 		icon = {
 			folder_open = "▼",
 			folder_closed = "►",
+		},
+	},
+	filesystem = {
+		filtered_items = {
+			hide_dotfiles = false,
 		},
 	},
 })

@@ -1,8 +1,3 @@
-local status, lualine = pcall(require, "lualine")
-if not status then
-	return
-end
-
 local M = {}
 M.theme = function()
 	local colors = {
@@ -49,21 +44,4 @@ M.theme = function()
 		},
 	}
 end
-
-local ayu = require("lualine.themes.ayu_mirage")
-local cattpuccin = require("lualine.themes.catppuccin-macchiato")
-local custom = M.theme() -- This is macchiato with transparencies
-
-lualine.setup({
-	options = {
-		theme = custom,
-	},
-	sections = {
-		lualine_a = { "mode" },
-		lualine_b = { "branch", "diff", "diagnostics" },
-		lualine_c = {},
-		lualine_x = {},
-		lualine_y = { "progress" },
-		lualine_z = { "location" },
-	},
-})
+return M
