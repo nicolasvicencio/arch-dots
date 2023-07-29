@@ -15,26 +15,19 @@ local plugins = {
 	"wbthomason/packer.nvim",
 	"bluz71/vim-nightfly-guicolors",
 	"Shatur/neovim-ayu",
-	"rebelot/kanagawa.nvim",
 	"EdenEast/nightfox.nvim",
 	"sainnhe/sonokai",
 	"sainnhe/everforest",
 	"folke/tokyonight.nvim",
 	{ "catppuccin/nvim", name = "catppuccin" },
-	"marko-cerovac/material.nvim",
-	"shaunsingh/nord.nvim",
 	"rose-pine/neovim",
 	"rmehri01/onenord.nvim",
-	"navarasu/onedark.nvim",
-	"w3barsi/barstrata.nvim",
-	"sainnhe/edge",
 	"xiyaowong/transparent.nvim", -- :TransparentEnable to activate
 	"lewis6991/gitsigns.nvim", -- show line modifications on left hand side
 	"kdheepak/lazygit.nvim", -- gui for git thingsseu
 	"mbbill/undotree", -- branch your changes in the current file
 	"mg979/vim-visual-multi", -- multicursors
 	"RRethy/vim-illuminate", -- iluminate words and references in the current file <a-p> <a-n> to move
-	"samodostal/image.nvim",
 	{ "windwp/nvim-ts-autotag", dependencies = "nvim-treesitter" }, -- autoclose tags
 	"windwp/nvim-autopairs", -- autoclose parens, brackets, quotes, etc...
 	"farmergreg/vim-lastplace", -- put the cursor in the last place yeah very descriptive
@@ -42,11 +35,9 @@ local plugins = {
 	"nvim-lua/plenary.nvim", -- lua functions that many plugins use
 	"klen/nvim-test", -- testing
 	"ThePrimeagen/harpoon", -- move between file blazingly fast
-	"christoomey/vim-tmux-navigator", -- tmux & split window navigation
 	"szw/vim-maximizer", -- maximizes and restores current window
 	"tpope/vim-surround", -- add, delete, change surroundings (it's awesome)
 	"numToStr/Comment.nvim",
-	"nvim-tree/nvim-tree.lua",
 	"nvim-tree/nvim-web-devicons",
 	"nvim-lualine/lualine.nvim",
 	{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" }, -- dependency for better sorting performance
@@ -105,7 +96,17 @@ local plugins = {
 		event = "VimEnter",
 		dependencies = { { "nvim-tree/nvim-web-devicons" } },
 	},
+	{
+		"nvim-neo-tree/neo-tree.nvim",
+		branch = "v3.x",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+			"MunifTanjim/nui.nvim",
+		},
+	},
 	"simrat39/rust-tools.nvim",
+	"voldikss/vim-floaterm",
 }
 
 require("lazy").setup(plugins, {})

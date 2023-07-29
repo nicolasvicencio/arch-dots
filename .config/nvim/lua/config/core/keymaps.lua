@@ -49,8 +49,8 @@ keymap.set("n", "<tab>", ":tabp<CR>") --  go to previous tab
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
 
 -- nvim tree
-keymap.set("n", "<C-.>", ":NvimTreeToggle<CR>")
-keymap.set("n", "<leader>e", ":NvimTreeFocus<CR>")
+keymap.set("n", "<C-.>", ":Neotree toggle<CR>")
+keymap.set("n", "<leader>e", ":Neotree focus<CR>")
 
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
@@ -90,3 +90,4 @@ vim.keymap.set("n", "<A-p>", function()
 end)
 
 vim.api.nvim_set_keymap("n", ":", "<cmd>FineCmdline<CR>", { noremap = true })
+keymap.set("n", "<leader>ft", ":FloatermToggle<CR>", { noremap = true })

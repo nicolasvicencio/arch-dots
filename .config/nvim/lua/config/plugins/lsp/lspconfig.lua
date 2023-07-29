@@ -16,6 +16,22 @@ if not typescript_setup then
 	return
 end
 
+local rust_setup, rust = pcall(require, "rust-tools")
+if not rust_setup then
+	return
+end
+
+rust.setup({
+	server = {
+		on_attach = function(_, bufnr)
+			-- Hover actions
+			vim.keymap.set("n", "<C-space>", rust.hover_actions.hover_actions, { buffer = bufnr })
+			-- Code action groups
+			vim.keymap.set("n", "<Leader>ca", rust.code_action_group.code_action_group, { buffer = bufnr })
+		end,
+	},
+})
+
 local keymap = vim.keymap -- for conciseness
 
 -- enable keybinds only for when lsp server available
@@ -87,6 +103,11 @@ lspconfig["emmet_ls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 	filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte", "astro" },
+})
+
+lspconfig["rust_analyzer"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
 })
 
 -- configure lua server (with special settings)

@@ -38,8 +38,11 @@ catppuccin.setup({
 	custom_highlights = {},
 	integrations = {
 		cmp = true,
-		nvimtree = true,
+		-- nvimtree = { enabled = true, show_root = true },
 		treesitter = true,
+		dashboard = true,
+		neotree = true,
+		harpoon = true,
 		-- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
 	},
 })
