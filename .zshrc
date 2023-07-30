@@ -12,6 +12,7 @@ alias l='lsd --group-dirs=first'
 alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
 alias cat='bat'
+alias purge='sudo pacman -R $(pacman -Qdtq)'
 alias theme='kitty +kitten themes'
 alias view='kitty +kitten icat'
 
