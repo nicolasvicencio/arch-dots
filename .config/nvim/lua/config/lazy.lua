@@ -54,6 +54,7 @@ local plugins = {
 	"williamboman/mason-lspconfig.nvim", -- bridges gap b/w mason & lspconfig
 	"neovim/nvim-lspconfig", -- easily configure language servers
 	"hrsh7th/cmp-nvim-lsp", -- for autocompletion
+	"nvim-tree/nvim-tree.lua",
 	"christoomey/vim-tmux-navigator",
 	{
 		"glepnir/lspsaga.nvim",
@@ -96,15 +97,6 @@ local plugins = {
 		"glepnir/dashboard-nvim",
 		event = "VimEnter",
 		dependencies = { { "nvim-tree/nvim-web-devicons" } },
-	},
-	{
-		"nvim-neo-tree/neo-tree.nvim",
-		branch = "v3.x",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-			"MunifTanjim/nui.nvim",
-		},
 	},
 	"simrat39/rust-tools.nvim",
 	"voldikss/vim-floaterm",
