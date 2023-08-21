@@ -4,7 +4,7 @@ if not setup then
 end
 
 catppuccin.setup({
-	flavour = "macchiato", -- latte, frappe, macchiato, mocha
+	flavour = "frappe", -- latte, frappe, macchiato, mocha
 	background = { -- :h background
 		light = "latte",
 		dark = "mocha",
@@ -39,7 +39,7 @@ catppuccin.setup({
 	integrations = {
 		cmp = true,
 		treesitter = true,
-		neotree = false,
+		neotree = true,
 		harpoon = true,
 		-- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
 	},

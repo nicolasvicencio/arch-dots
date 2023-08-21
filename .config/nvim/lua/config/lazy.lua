@@ -59,6 +59,7 @@ local plugins = {
 	"onsails/lspkind.nvim", -- vs-code like icons for autocompletion
 	"jose-elias-alvarez/null-ls.nvim", -- configure formatters & linters
 	"jayp0521/mason-null-ls.nvim", -- bridges gap b/w mason & null-ls
+	"nvim-tree/nvim-tree.lua",
 	{
 		"glepnir/lspsaga.nvim",
 		branch = "main",
@@ -85,15 +86,6 @@ local plugins = {
 		dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-lua/plenary.nvim" },
 		build = "cd formatter && npm i && npm run build",
 		config = true,
-	},
-	{
-		"nvim-neo-tree/neo-tree.nvim",
-		branch = "v3.x",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-			"MunifTanjim/nui.nvim",
-		},
 	},
 }
 

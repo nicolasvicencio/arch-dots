@@ -49,12 +49,12 @@ keymap.set("n", "<tab>", ":tabp<CR>") --  go to previous tab
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
 
 -- nvim tree
--- keymap.set("n", "<C-.>", ":NvimTreeToggle<CR>")
--- keymap.set("n", "<leader>e", ":NvimTreeFocus<CR>")
+keymap.set("n", "<C-.>", ":NvimTreeToggle<CR>")
+keymap.set("n", "<leader>e", ":NvimTreeFocus<CR>")
 
 -- neo Tree
-keymap.set("n", "<C-.>", ":Neotree toggle<CR>")
-keymap.set("n", "<leader>e", ":Neotree focus<CR>")
+-- keymap.set("n", "<C-.>", ":Neotree toggle<CR>")
+-- keymap.set("n", "<leader>e", ":Neotree focus<CR>")
 
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
