@@ -30,16 +30,16 @@ local plugins = {
 	"RRethy/vim-illuminate", -- iluminate words and references in the current file <a-p> <a-n> to move
 	{ "windwp/nvim-ts-autotag", dependencies = "nvim-treesitter" }, -- autoclose tags
 	"windwp/nvim-autopairs", -- autoclose parens, brackets, quotes, etc...
-	"farmergreg/vim-lastplace", -- put the cursor in the last place yeah very descriptive
 	"norcalli/nvim-colorizer.lua", -- colorize the... colors
 	"nvim-lua/plenary.nvim", -- lua functions that many plugins use
-	"klen/nvim-test", -- testing
 	"ThePrimeagen/harpoon", -- move between file blazingly fast
 	"szw/vim-maximizer", -- maximizes and restores current window
 	"tpope/vim-surround", -- add, delete, change surroundings (it's awesome)
 	"numToStr/Comment.nvim",
 	"nvim-tree/nvim-web-devicons",
 	"nvim-lualine/lualine.nvim",
+	"simrat39/rust-tools.nvim",
+	"voldikss/vim-floaterm",
 	{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" }, -- dependency for better sorting performance
 	{ "nvim-telescope/telescope.nvim", branch = "0.1.x" }, -- fuzzy finder
 	"hrsh7th/nvim-cmp", -- completion plugin
@@ -54,8 +54,11 @@ local plugins = {
 	"williamboman/mason-lspconfig.nvim", -- bridges gap b/w mason & lspconfig
 	"neovim/nvim-lspconfig", -- easily configure language servers
 	"hrsh7th/cmp-nvim-lsp", -- for autocompletion
-	"nvim-tree/nvim-tree.lua",
 	"christoomey/vim-tmux-navigator",
+	"jose-elias-alvarez/typescript.nvim", -- additional functionality for typescript server (e.g. rename file & update imports)
+	"onsails/lspkind.nvim", -- vs-code like icons for autocompletion
+	"jose-elias-alvarez/null-ls.nvim", -- configure formatters & linters
+	"jayp0521/mason-null-ls.nvim", -- bridges gap b/w mason & null-ls
 	{
 		"glepnir/lspsaga.nvim",
 		branch = "main",
@@ -64,21 +67,11 @@ local plugins = {
 			{ "nvim-treesitter/nvim-treesitter" },
 		},
 	}, -- enhanced lsp uis
-	"jose-elias-alvarez/typescript.nvim", -- additional functionality for typescript server (e.g. rename file & update imports)
-	"onsails/lspkind.nvim", -- vs-code like icons for autocompletion
-	"jose-elias-alvarez/null-ls.nvim", -- configure formatters & linters
-	"jayp0521/mason-null-ls.nvim", -- bridges gap b/w mason & null-ls
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = function()
 			local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
 			ts_update()
-		end,
-	},
-	{
-		"ahmedkhalf/project.nvim",
-		config = function()
-			require("project_nvim").setup({})
 		end,
 	},
 	{
@@ -94,12 +87,14 @@ local plugins = {
 		config = true,
 	},
 	{
-		"glepnir/dashboard-nvim",
-		event = "VimEnter",
-		dependencies = { { "nvim-tree/nvim-web-devicons" } },
+		"nvim-neo-tree/neo-tree.nvim",
+		branch = "v3.x",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+			"MunifTanjim/nui.nvim",
+		},
 	},
-	"simrat39/rust-tools.nvim",
-	"voldikss/vim-floaterm",
 }
 
 require("lazy").setup(plugins, {})

@@ -27,7 +27,6 @@ opt.signcolumn = "yes"
 opt.backspace = "indent,eol,start"
 
 opt.clipboard:append("unnamedplus")
-opt.wrap = false
 opt.scrolloff = 8
 
 opt.splitright = true
