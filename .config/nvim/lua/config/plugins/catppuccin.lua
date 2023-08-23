@@ -39,8 +39,8 @@ catppuccin.setup({
 	integrations = {
 		cmp = true,
 		treesitter = true,
-		neotree = true,
-		harpoon = true,
+		neotree = false,
+		harpoon = false,
 		-- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
 	},
 })
