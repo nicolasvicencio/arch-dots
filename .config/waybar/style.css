@@ -5,10 +5,12 @@
   font-weight: bold;
   font-size: 12px;
   min-height: 0;
+  background: transparent;
 }
 
 window#waybar {
-  background: rgba(21, 18, 27, 0);
+  /* background: rgba(21, 18, 27, 0); */
+  background: transparent;
   color: #ffffff;
   transition-property: background-color;
   transition-duration: 0.5s;
@@ -54,7 +56,8 @@ tooltip {
   border-radius: 10px;
 }
 
-#custom-power_profile,
+#custom-power-menu,
+#custom-spotify,
 #custom-weather,
 #window,
 #clock,
@@ -69,14 +72,12 @@ tooltip {
   background: #1e1e2e;
   opacity: 0.8;
   padding: 0px 10px;
-  margin: 3px 0px;
+  margin: 5px 0px;
+  border-radius: 10px;
   /* margin-top: 10px; */
   border: 1px solid #181825;
 }
 
-#custom-spotify {
-  color: #e5e5e5;
-}
 #temperature {
   border-radius: 10px 0px 0px 10px;
 }
@@ -111,7 +112,7 @@ tooltip {
   padding-left: 5px;
 }
 
-#custom-power_profile {
+#custom-power-menu {
   color: #a6e3a1;
   border-left: 0px;
   border-right: 0px;
@@ -125,7 +126,7 @@ tooltip {
 
 #clock {
   color: #fab387;
-  border-radius: 10px 0px 0px 10px;
+  border-radius: 10px;
   margin-left: 10px;
   border-right: 0px;
 }
@@ -153,8 +154,9 @@ tooltip {
   color: #cba6f7;
   border-left: 0px;
   border-right: 0px;
-  border-radius: 0px 10px 10px 0px;
+  border-radius: 10px;
   margin-right: 10px;
+  margin-left: 10px;
 }
 
 #battery {
