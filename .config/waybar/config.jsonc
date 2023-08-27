@@ -18,8 +18,8 @@
     "tray",
     "pulseaudio",
     "pulseaudio#microphone",
-    "network",
-    "custom/weather"
+    "network"
+    // "custom/weather"
   ],
   "hyprland/window": {
     "format": "{}"
