@@ -5,11 +5,11 @@
   font-weight: bold;
   font-size: 12px;
   min-height: 0;
-  background: transparent;
+  /* background: transparent; */
 }
 
 window#waybar {
-  /* background: rgba(21, 18, 27, 0); */
+  /* background: rgba(21, 18, 27, 0.8); */
   background: transparent;
   color: #ffffff;
   transition-property: background-color;
@@ -21,7 +21,8 @@ window#waybar {
 }
 
 tooltip {
-  background: #1e1e2e;
+  background: rgba(21, 18, 27, 0.3);
+  /* background: #1e1e2e; */
   border-radius: 10px;
   border-width: 2px;
   border-style: solid;
