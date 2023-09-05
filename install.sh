@@ -1,5 +1,5 @@
 #/bin/bash 
-yay -S base-devel anki neovim redshift lsd bat noto-fonts-emoji mpv python-pip translate-shell ripgrep bitwarden lazygit npm pnpm zsh steam github-cli discord p7zip onlyoffice-bin htop kvantum ttf-jetbrains-mono-nerd cava kcolorchooser kdeplasma-addons graphicsmagick gs lf wl-clipboard wine ttf-font-awesome qt5ct 
+yay -S base-devel anki neovim redshift lsd bat noto-fonts-emoji mpv python-pip translate-shell ripgrep bitwarden lazygit npm pnpm zsh steam github-cli discord p7zip htop kvantum ttf-jetbrains-mono-nerd cava-git kcolorchooser kdeplasma-addons graphicsmagick gs lf wl-clipboard wine ttf-font-awesome qt5ct
 
 # Check and set Zsh as the default shell
 [[ "$(awk -F: -v user="$USER" '$1 == user {print $NF}' /etc/passwd) " =~ "zsh " ]] || chsh -s $(which zsh)

@@ -3,12 +3,13 @@
   "position": "top",
   "exclusive": true,
   "passthrough": false,
+  "spacing": 10,
   "gtk-layer-shell": true,
   "margin-left": 10,
   "margin-right": 10,
   "height": 20,
-  "modules-left": ["custom/power-menu", "clock", "wlr/workspaces"],
-  "modules-center": ["custom/spotify"],
+  "modules-left": ["custom/power-menu", "clock", "hyprland/workspaces"],
+  "modules-center": ["custom/media"],
   "modules-right": [
     // "bluetooth",
     // "temperature",
@@ -17,7 +18,7 @@
     // "backlight",
     "tray",
     "pulseaudio",
-    "pulseaudio#microphone",
+    // "pulseaudio#microphone",
     "network"
     // "custom/weather"
   ],
@@ -42,22 +43,12 @@
   //     "10": []
   //   }
   // },
-  "wlr/workspaces": {
+  "hyprland/workspaces": {
     "format": "{icon}",
-    "all-outputs": true,
+    "all-outputs": false,
     "persistent_workspaces": {
-      "1": [],
-      "2": [],
-      "3": [],
-      "4": [],
-      "5": [],
-      "6": [],
-      "7": [],
-      "8": [],
-      "9": [],
-      "10": []
+      "*": 5
     },
-
     "on-click": "activate",
     "format-icons": {
       "1": "",
@@ -67,7 +58,8 @@
       "5": "",
       "urgent": "",
       "active": "",
-      "default": ""
+      "default": "",
+      "persistent": ""
     }
   },
 
@@ -95,7 +87,8 @@
   },
 
   "clock": {
-    "format": "{: %I:%M %p   %a, %b %e}",
+    // "format": "{: %I:%M %p   %a, %b %e}",
+    "format": "{: %I:%M %p}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
 
@@ -190,6 +183,18 @@
     "on-click": "playerctl play-pause",
     "on-double-click-right": "playerctl next",
     "on-scroll-down": "playerctl previous"
+  },
+  "custom/media": {
+    "format": "{icon} {}",
+    "return-type": "json",
+    "max-length": 40,
+    "format-icons": {
+      "spotify": "",
+      "default": "🎜"
+    },
+    "escape": true,
+    "exec": "python3 $HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null" // Script in resources folder
+    // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
   },
   "custom/power-menu": {
     "format": " <span color='#6a92d7'>⏻ </span>",

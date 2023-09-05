@@ -31,7 +31,6 @@ tooltip {
 #workspaces button {
   padding: 5px;
   color: #313244;
-  margin-right: 5px;
 }
 
 #workspaces button.active {
@@ -58,6 +57,7 @@ tooltip {
 
 #custom-power-menu,
 #custom-spotify,
+#custom-media,
 #custom-weather,
 #window,
 #clock,
@@ -72,7 +72,7 @@ tooltip {
   background: #1e1e2e;
   opacity: 0.8;
   padding: 0px 10px;
-  margin: 5px 0px;
+  margin: 1px 0px;
   border-radius: 10px;
   /* margin-top: 10px; */
   border: 1px solid #181825;
@@ -92,7 +92,6 @@ tooltip {
 
 #tray {
   border-radius: 10px;
-  margin-right: 10px;
 }
 
 #tray > .passive {
@@ -107,8 +106,7 @@ tooltip {
 #workspaces {
   background: #1e1e2e;
   border-radius: 10px;
-  margin-left: 10px;
-  padding-right: 0px;
+  padding-right: 5px;
   padding-left: 5px;
 }
 
@@ -121,13 +119,11 @@ tooltip {
 #window {
   border-radius: 10px;
   margin-left: 60px;
-  margin-right: 60px;
 }
 
 #clock {
   color: #fab387;
   border-radius: 10px;
-  margin-left: 10px;
   border-right: 0px;
 }
 
@@ -141,7 +137,6 @@ tooltip {
 #bluetooth {
   color: #89b4fa;
   border-radius: 10px;
-  margin-right: 10px;
 }
 
 #pulseaudio {
@@ -155,19 +150,14 @@ tooltip {
   border-left: 0px;
   border-right: 0px;
   border-radius: 10px;
-  margin-right: 10px;
-  margin-left: 10px;
 }
 
 #battery {
   color: #a6e3a1;
   border-radius: 10px;
-  margin-right: 10px;
-  border-left: 0px;
 }
 
 #custom-weather {
   border-radius: 10px;
   border-right: 0px;
-  margin-left: 0px;
 }
