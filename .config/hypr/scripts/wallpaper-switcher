@@ -19,22 +19,32 @@ fi
 wofi_command="wofi --show dmenu \
 			--prompt 'choose..'
 			--conf ${CONFIG} --style ${STYLE} --color ${COLORS} \
-			--width=300 --height=400 \
+			--width=600 --height=400 \
 			--cache-file=/dev/null \
 			--hide-scroll --no-actions \
 			--define=matching=fuzzy"
 
 menu(){
-printf "1. cityscape\n" 
-printf "2. cityscape2\n" 
-printf "3. colorful-snow\n" 
-printf "4. Hong-Kong\n" 
-printf "5. Into-the-night\n"
-printf "6. lain\n"
-printf "7. lonely-night\n"
-printf "8. neon\n"
-printf "9. old\n"
-printf "10. random"
+printf "1. astronaut\n" 
+printf "2. bioshock\n" 
+printf "3. blue\n" 
+printf "4. cow\n" 
+printf "5. dark night\n"
+printf "6. forest\n"
+printf "7. gray\n"
+printf "8. man in streen\n"
+printf "9. japan\n"
+printf "10. leaf\n"
+printf "11. night\n"
+printf "12. purple\n"
+printf "13. rails\n"
+printf "14. store\n"
+printf "15. berserk\n"
+printf "16. city\n"
+printf "17. beach\n"
+printf "18. tree\n"
+printf "19. green house\n"
+printf "20. rain\n"
 }
 
 swww query || swww init
@@ -43,43 +53,83 @@ main() {
 choice=$(menu | ${wofi_command} | cut -d. -f1)
 case $choice in
 1)
-    swww img ${DIR}/cityscape.jpg --transition-fps 30 --transition-type any --transition-duration 3
+    swww img ${DIR}/astronaut.png --transition-fps 60 --transition-type any --transition-duration 3
     return
     ;;
 2)
-    swww img ${DIR}/cityscape2.jpg --transition-fps 30 --transition-type any --transition-duration 3
+    swww img ${DIR}/bioshock.jpg --transition-fps 60 --transition-type any --transition-duration 3
     return
     ;;
 3)
-    swww img ${DIR}/colorful-snow.jpg --transition-fps 30 --transition-type any --transition-duration 3
+    swww img ${DIR}/blue.jpg --transition-fps 60 --transition-type any --transition-duration 3
     return
     ;;
 4)
-    swww img ${DIR}/hong-kong.jpg --transition-fps 30 --transition-type any --transition-duration 3
+    swww img ${DIR}/cow.jpg --transition-fps 60 --transition-type any --transition-duration 3
     return
     ;;
 5)
-    swww img ${DIR}/into-the-night.jpg --transition-fps 30 --transition-type any --transition-duration 3
+    swww img ${DIR}/darkNight.jpg --transition-fps 60 --transition-type any --transition-duration 3
     return
     ;;
 6)
-    swww img ${DIR}/lain.jpg --transition-fps 30 --transition-type any --transition-duration 3
+    swww img ${DIR}/forest.png --transition-fps 60 --transition-type any --transition-duration 3
     return
     ;;
 7)
-    swww img ${DIR}/lonely-night.jpg --transition-fps 30 --transition-type any --transition-duration 3
+    swww img ${DIR}/gray.jpeg --transition-fps 60 --transition-type any --transition-duration 3
     return
     ;;
 8)
-    swww img ${DIR}/neon.jpg --transition-fps 30 --transition-type any --transition-duration 3
+    swww img ${DIR}/ign_manInStreet.png --transition-fps 60 --transition-type any --transition-duration 3
     return
     ;;
 9)
-    swww img ${DIR}/old.png --transition-fps 30 --transition-type any --transition-duration 3
+    swww img ${DIR}/japan.jpg --transition-fps 60 --transition-type any --transition-duration 3
     return
     ;;
 10)
-    swww img ${DIR}/${RANDOMPICS} --transition-fps 30 --transition-type any --transition-duration 3
+    swww img ${DIR}/leaf.jpg --transition-fps 60 --transition-type any --transition-duration 3
+    return
+    ;;
+11)
+    swww img ${DIR}/night.jpg --transition-fps 60 --transition-type any --transition-duration 3
+    return
+    ;;
+12)
+    swww img ${DIR}/purple.jpg --transition-fps 60 --transition-type any --transition-duration 3
+    return
+    ;;
+13)
+    swww img ${DIR}/rails.jpg --transition-fps 60 --transition-type any --transition-duration 3
+    return
+    ;;
+14)
+    swww img ${DIR}/store.gif --transition-fps 60 --transition-type any --transition-duration 3
+    return
+    ;;
+15)
+    swww img ${DIR}/berserk.gif --transition-fps 60 --transition-type any --transition-duration 3
+    return
+    ;;
+16)
+    swww img ${DIR}/city.gif --transition-fps 60 --transition-type any --transition-duration 3
+    return
+    ;;
+17)
+    swww img ${DIR}/beach.gif --transition-fps 60 --transition-type any --transition-duration 3
+    return
+    ;;
+18)
+    swww img ${DIR}/tree.gif --transition-fps 60 --transition-type any --transition-duration 3
+    return
+    ;;
+19)
+    swww img ${DIR}/green-house.gif --transition-fps 60 --transition-type any --transition-duration 3
+    return
+    ;;
+20)
+    swww img ${DIR}/rain.gif --transition-fps 60 --transition-type any --transition-duration 3
     return
     ;;
 esac
