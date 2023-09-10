@@ -20,9 +20,9 @@
     // "backlight",
     "tray",
     "pulseaudio",
-    "clock",
     // "pulseaudio#microphone",
-    "network"
+    "network",
+    "clock"
     // "custom/weather"
   ],
   "hyprland/window": {
@@ -59,7 +59,7 @@
       "3": "",
       "4": "",
       "5": "",
-      "active": " 󰮯",
+      "active": "",
       "default": "",
       "urgent": "",
       "default": "",
@@ -91,8 +91,8 @@
   },
 
   "clock": {
-    // "format": "{: %I:%M %p   %a, %b %e}",
-    "format": "{: %I:%M %p}",
+    "format": "{: %I:%M %p   %b %e}",
+    // "format": "{: %I:%M %p}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
 
@@ -123,6 +123,7 @@
     "tooltip": false,
     "format-muted": " Muted",
     "on-click": "pamixer -t",
+    "on-click-right": "pavucontrol",
     "on-scroll-up": "pamixer -i 5",
     "on-scroll-down": "pamixer -d 5",
     "scroll-step": 5,
@@ -190,11 +191,14 @@
     "format": "{}  ",
     "return-type": "json",
     "on-click": "playerctl play-pause",
-    "on-double-click-right": "playerctl next",
+    "on-click-right": "playerctl next",
     "on-scroll-down": "playerctl previous"
   },
   "custom/media": {
     "format": "{icon} {}",
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl next",
+    "on-scroll-down": "playerctl previous",
     "return-type": "json",
     "max-length": 40,
     "format-icons": {
