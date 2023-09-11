@@ -17,16 +17,16 @@ window#waybar {
   border-top: 8px transparent;
   border-radius: 8px;
   transition-duration: 0.5s;
-  margin: 16px 16px;
+  margin: 5px 5px;
 }
 
 tooltip {
   background: rgba(21, 18, 27, 1);
   /* background: #1e1e2e; */
   border-radius: 10px;
-  border-width: 2px;
-  border-style: solid;
-  border-color: #11111b;
+  /* border-width: 2px; */
+  /* border-style: solid; */
+  /* border-color: #11111b; */
 }
 
 #workspaces button {
@@ -73,10 +73,10 @@ tooltip {
 #backlight {
   background: #1e1e2e;
   opacity: 0.8;
-  color: white;
+  /* color: white; */
   padding: 0 10px;
   /* margin: 1px 0px; */
-  border-radius: 10px;
+  border-radius: 7px;
   /* margin-top: 10px; */
   /* border: 1px solid #181825; */
 }
@@ -108,7 +108,7 @@ tooltip {
 
 #workspaces {
   background: #1e1e2e;
-  border-radius: 10px;
+  border-radius: 7px;
   padding-right: 5px;
   padding-left: 5px;
 }
@@ -120,19 +120,20 @@ tooltip {
 }
 
 #window {
-  border-radius: 10px;
-  margin-left: 60px;
+  border-radius: 7px;
+  color: #f5a97f;
+  /* margin-left: 60px; */
 }
 
 #clock {
   color: #fab387;
-  border-radius: 10px;
+  border-radius: 7px;
   border-right: 0px;
 }
 
 #network {
   color: #f9e2af;
-  border-radius: 10px;
+  border-radius: 7px;
   border-left: 0px;
   border-right: 0px;
 }
