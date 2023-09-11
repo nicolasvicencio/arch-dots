@@ -1,5 +1,8 @@
 #/bin/bash 
-yay -S base-devel anki neovim redshift lsd bat noto-fonts-emoji mpv python-pip translate-shell ripgrep bitwarden lazygit npm pnpm zsh steam github-cli discord p7zip htop kvantum ttf-jetbrains-mono-nerd cava-git kcolorchooser kdeplasma-addons graphicsmagick gs lf wl-clipboard wine ttf-font-awesome ttf-iosevka-nerd ttf-material-design-icons-extended  
+
+yay 
+
+yay -S base-devel anki neovim redshift lsd bat noto-fonts-emoji mpv python-pip ripgrep bitwarden lazygit npm pnpm zsh steam github-cli discord p7zip btop kvantum ttf-jetbrains-mono-nerd cava-git   graphicsmagick gs lf wl-clipboard wine ttf-font-awesome ttf-iosevka-nerd ttf-material-design-icons-extended  
 
 # Check and set Zsh as the default shell
 [[ "$(awk -F: -v user="$USER" '$1 == user {print $NF}' /etc/passwd) " =~ "zsh " ]] || chsh -s $(which zsh)
@@ -19,5 +22,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 cp .zshrc $HOME/.zshrc
 
 cp -r .config/* $HOME/.config
+
+rustup default stable
 
 

@@ -91,7 +91,7 @@
   },
 
   "clock": {
-    "format": "{: %I:%M %p   %b %e}",
+    "format": "{: %I:%M %p  %m/%e}",
     // "format": "{: %I:%M %p}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
