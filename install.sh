@@ -1,7 +1,9 @@
 #/bin/bash 
 
+# Update yay
 yay 
 
+# Install base packages
 yay -S base-devel anki neovim redshift lsd bat noto-fonts-emoji mpv python-pip ripgrep bitwarden lazygit npm pnpm zsh steam github-cli discord p7zip btop kvantum ttf-jetbrains-mono-nerd cava-git   graphicsmagick gs lf wl-clipboard wine ttf-font-awesome ttf-iosevka-nerd ttf-material-design-icons-extended  
 
 # Check and set Zsh as the default shell
@@ -19,10 +21,14 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
+# Apply Zsh config
 cp .zshrc $HOME/.zshrc
 
+# Install configs
 cp -r .config/* $HOME/.config
+cp -r etc/* $HOME/.config
 
+# Default rustup
 rustup default stable
 
 
