@@ -11,7 +11,7 @@
     "format": "{icon}",
     "all-outputs": false,
     "persistent_workspaces": {
-      "*": 5
+      "*": 4
     },
     "on-click": "activate",
     "format-icons": {
@@ -19,7 +19,6 @@
       "2": "",
       "3": "",
       "4": "",
-      "5": "",
       "active": "",
       "default": "",
       "urgent": "",

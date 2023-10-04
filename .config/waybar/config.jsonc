@@ -6,19 +6,16 @@
   "passthrough": false,
   "spacing": 5,
   "gtk-layer-shell": true,
-  "margin-left": 3,
-  "margin-right": 3,
-  "margin-top": 2,
   "padding-left": 10,
   "padding-right": 10,
   "height": 20,
   "modules-left": [
     "custom/power-menu",
     "hyprland/workspaces",
-    // "custom/separator-left",
-    "hyprland/window"
+    // "custom/separator-left"
+    "custom/media"
   ],
-  "modules-center": ["custom/media"],
+  "modules-center": ["clock"],
   "modules-right": [
     "tray",
     "pulseaudio",
