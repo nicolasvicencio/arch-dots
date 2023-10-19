@@ -11,11 +11,10 @@
   "height": 20,
   "modules-left": [
     "custom/power-menu",
-    "hyprland/workspaces",
+    "hyprland/workspaces"
     // "custom/separator-left"
-    "custom/media"
   ],
-  "modules-center": ["clock"],
+  "modules-center": ["custom/media"],
   "modules-right": [
     "tray",
     "pulseaudio",
