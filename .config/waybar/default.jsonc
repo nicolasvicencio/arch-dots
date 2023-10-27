@@ -19,11 +19,9 @@
       "2": "",
       "3": "",
       "4": "",
-      "active": "",
-      "default": "",
-      "urgent": "",
-      "default": "",
-      "persistent": ""
+      "default": "",
+      "active": "󰮯",
+      "urgent": "󰊠"
     }
   },
   "custom/power_profile": {
