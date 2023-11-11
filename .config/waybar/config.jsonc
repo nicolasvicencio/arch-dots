@@ -17,6 +17,8 @@
   "modules-center": ["custom/media"],
   "modules-right": [
     "tray",
+    "backlight",
+    "battery",
     "pulseaudio",
     // "pulseaudio#microphone",
     "memory",

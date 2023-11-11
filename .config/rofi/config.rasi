@@ -1,115 +1,119 @@
+/*config*/
 configuration {
-    font: "CaskaydiaCove Nerd Font 12";
-    drun {
-        display-name: " ";
-    }
-    run {
-        display-name: " ";
-    }
-    timeout {
-        delay: 10;
-        action: "kb-cancel";
-    }
+    show-icons:                 true;
+    drun-display-format:        "{name}";
 }
 
-@import "colorschemes/everforest.rasi"
 
+
+* {
+    font: "JetBrainsMono 12";
+}
+
+
+/*window*/
 window {
-    background-color: rgba(0,0,0, 0.9);
-    border:           3;
-    padding:          15;
-    width: 35%;
-    height: 45%;
+    width: 800px;
+
+    border: 0px solid;
+    border-color: @foreground;
+    border-radius: 12px;
+
+    background-color: #11111b ;
+    padding: 0px;
 }
+
+
+/*container!*/
 mainbox {
-    border:  0;
-    padding: 8;
+    spacing: 10px;
+    padding: 20px;
+    children: [ "inputbar", "listview" ];
 }
-message {
-    border:       0px;
-    border-color: @active;
-    padding:      1px;
-}
-textbox {
-    text-color: @foreground;
-}
-listview {
-    fixed-height: 0;
-    border:       0px;
-    border-color: @active;
-    spacing:      4px ;
-    scrollbar:    false;
-    padding:      4px 0px 0px ;
-}
-element {
-    border:  0;
-    padding: 6px ;
-    border-radius: 8px;
-} element.normal.normal {
-    background-color: @background;
-    text-color:       white;
-}
-element.normal.active {
-    background-color: @active;
-    text-color:       white;
-}
-element.selected.normal {
-    background-color: gray;
-    text-color:       white;
-}
-element.alternate.normal {
-    background-color: @background;
-    text-color:       white;
-}
-scrollbar {
-    background-color: @foreground;
-    handle-color:   @selected;
-    border-radius:  10px;
-    width:          2px ;
-    border:         0;
-    handle-width:   8px ;
-    padding:        0;
-}
-sidebar {
-    border:       2px dash 0px 0px ;
-    border-color: @active;
-}
-button.selected {
-    background-color: inherit;
-    text-color:       @foreground;
-}
+
+
+/*inputbar*/
+
+/*-conteiner inputbar*/
 inputbar {
-    spacing:    0;
-    text-color: @selected;
-    padding:    10px ;
-    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+    spacing: 10px;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: #11111b ;
+    text-color: #cdd6f4 ;
+    children: [ "textbox-prompt-colon", "entry" ];
 }
-case-indicator {
-    spacing:    0;
-    text-color: @selected;
-}
-entry {
-    placeholder: "Search..";
-    text-color: @selected;
-}
-prompt {
-    spacing:    0;
-    text-color: @selected;
-}
-element {
-    spacing: 0.5em;
-}
-element-text {
+
+/*-icons*/
+textbox-prompt-colon {
+    expand: false;
+    str: "";
     background-color: inherit;
     text-color: inherit;
     vertical-align: 0.5;
 }
+
+/*-promt*/
+entry {
+    background-color: inherit;
+    text-color: inherit;
+    placeholder: "Search";
+    placeholder-color: inherit;
+}
+
+/*list elemens*/
+listview {
+    columns: 2;
+    lines: 6;
+    scrollbar: false;
+    spacing: 10px;
+    text-color: #cdd6f4;
+    background-color: transparent;
+    border: 0px;
+}
+
+
+/*elements*/
+element {
+    spacing: 15px;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: #11111b;
+    text-color:#cdd6f4;
+}
+
+element.normal.normal {
+    background-color: #1e1e2e;
+    text-color:#cdd6f4;
+}
+
+
+element.alternate.normal {
+    background-color: #1e1e2e;
+    text-color: #cdd6f4;
+}
+
+element.selected.normal {
+    background-color: #b4befe;
+    text-color: #11111b;
+}
+
 element-icon {
-    size: 1.4em;
+    background-color: transparent;
+    text-color: inherit;
+    size: 32px;
 }
-textbox-prompt-colon {
-    expand:     false;
-    str:        " | ";
-    margin:     0px 0.3em 0em 0em ;
-    text-color: @foreground;
+element-text {
+    background-color: transparent;
+    text-color:  inherit;
+    vertical-align: 0.5;
 }
+
+
+
+
+
+
+
+
+
