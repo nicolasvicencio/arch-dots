@@ -25,6 +25,7 @@ cp .zshrc $HOME/.zshrc
 
 # Install configs
 cp -r .config/* $HOME/.config
+cp -rf thenes/* $HOME
 sudo cp -r etc/* /etc/
 
 # Default rustup
