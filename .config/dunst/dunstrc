@@ -86,7 +86,7 @@
 
 	# Frame
 	frame_width = 3
-	frame_color = "#1C2325"
+	frame_color = "#15161C"
 
 	# The transparency of the window. range: [0; 100]
 	# This option will only work if a compositing windowmanager is present (e.g. xcompmgr, compiz, etc..)
