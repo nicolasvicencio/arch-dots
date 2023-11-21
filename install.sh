@@ -25,9 +25,9 @@ cp .zshrc $HOME/.zshrc
 
 # Install configs
 cp -r .config/* $HOME/.config
-cp -r etc/* $HOME/.config
+sudo cp -r etc/* /etc/
 
 # Default rustup
 rustup default stable
 
-
+echo 'Log out and restart your machine'
