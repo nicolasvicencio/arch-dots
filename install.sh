@@ -1,10 +1,86 @@
 #/bin/bash 
 
-# Update yay
-yay -Syyu 
+#Update repos
+echo "Remember update your packages repositories"
+echo ""
 
-# Install base packages
-yay -S base-devel anki neovim kvantum lsd bat noto-fonts-emoji mpv python-pip ripgrep bitwarden lazygit npm pnpm zsh steam github-cli discord p7zip btop  ttf-jetbrains-mono-nerd cava-git vivaldi graphicsmagick gs lf wl-clipboard wine ttf-font-awesome ttf-iosevka-nerd ttf-material-design-icons-extended qbittorrent spotify spotify-adblock winetricks waybar-hyprland hyprland rofi dunst kitty gammastep swaybg swaylock-effects swayidle pamixer light brillo wlogout qt5ct wofi slurp swappy grim swww noto-fonts noto-fonts-cjk noto-fonts-tc ttf-tw adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts pavucontrol lib32-libpulse
+while true; do 
+read -p "Do you want to update now? (Y/n) " -n 1 upd_res
+
+case $upd_res in
+    [nN] ) 
+      echo ""
+      break;;
+    * ) 
+      yay -Syyu
+      break;;
+esac
+done
+
+clear
+
+
+#Installing hyprland config and copy contents
+while true; do 
+read -p "Install Hyprland configs? (Y/n) " -n 1 hypr_res
+
+case $hypr_res in
+  [nN] )
+      echo ""
+      break;;
+  * ) 
+      echo -e "\n Installing hyprland packages";
+      yay -S base-devel neovim kvantum lsd bat noto-fonts-emoji mpv python-pip ripgrep  lazygit npm pnpm zsh  github-cli  p7zip btop  ttf-jetbrains-mono-nerd cava-git  wl-clipboard  ttf-font-awesome ttf-iosevka-nerd ttf-material-design-icons-extended waybar-hyprland hyprland rofi dunst kitty gammastep swaybg swaylock-effects swayidle pamixer light brillo wlogout qt5ct wofi slurp swappy grim swww noto-fonts noto-fonts-cjk noto-fonts-tc ttf-tw adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts pavucontrol brightnessctl;
+
+      # Default rustup
+      rustup default stable
+
+      #Get configs
+      cp -r .config/* $HOME/.config;
+      cp -rf thenes/* $HOME;
+      break;;
+esac
+done
+clear
+
+#Installing personal packages
+while true; do 
+read -p 'Install Personal packages? (Y/n)' -n 1 base_res
+
+case $base_res in 
+  [nN] )
+     echo ""
+     break;;
+  * )
+     echo -e "\n Installing packages..."
+     yay -S zsh anki bitwarden steam discord vivaldi wine qbittorrent spotify spotify-adblock winetricks lib32-libpulse
+     sudo cp -r etc/* /etc/
+     break;;
+esac
+done
+clear
+
+while true; do 
+read -p 'Install Pentesting tools? (Y/n)' -n 1 hack_res
+
+case $hack_res in 
+  [nN] )
+     echo " "
+     break;;
+  * )
+     #Blackarch repository
+     curl -O https://blackarch.org/strap.sh
+     chmod +x strap.sh
+     sudo ./strap.sh
+     sudo yay -Syu
+     rm strap.sh
+
+     #Adding pentesting tools
+     yay -S nmap burpsuite wfuzz wireshark hydra metasploit aircrack-ng         
+     break;;
+esac
+done
+
 # Check and set Zsh as the default shell
 [[ "$(awk -F: -v user="$USER" '$1 == user {print $NF}' /etc/passwd) " =~ "zsh " ]] || chsh -s $(which zsh)
 
@@ -22,13 +98,5 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 
 # Apply Zsh config
 cp .zshrc $HOME/.zshrc
-
-# Install configs
-cp -r .config/* $HOME/.config
-cp -rf thenes/* $HOME
-sudo cp -r etc/* /etc/
-
-# Default rustup
-rustup default stable
 
 echo 'Log out and restart your machine'
