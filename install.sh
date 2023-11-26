@@ -37,7 +37,7 @@ case $hypr_res in
 
       #Get configs
       cp -r .config/* $HOME/.config;
-      cp -rf thenes/* $HOME;
+      cp -rf theme/* $HOME;
       break;;
 esac
 done
@@ -53,7 +53,7 @@ case $base_res in
      break;;
   * )
      echo -e "\n Installing packages..."
-     yay -S zsh anki bitwarden  discord vivaldi  qbittorrent spotify spotify-adblock  lib32-libpulse
+     yay -S zsh anki bitwarden vlc discord vivaldi qbittorrent spotify spotify-adblock lib32-libpulse
      sudo cp -r etc/* /etc/
      break;;
 esac
