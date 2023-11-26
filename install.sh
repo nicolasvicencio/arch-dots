@@ -30,7 +30,7 @@ case $hypr_res in
       break;;
   * ) 
       echo -e "\n Installing hyprland packages";
-      yay -S base-devel neovim kvantum lsd bat noto-fonts-emoji mpv python-pip ripgrep  lazygit npm pnpm zsh  github-cli  p7zip btop  ttf-jetbrains-mono-nerd cava-git  wl-clipboard  ttf-font-awesome ttf-iosevka-nerd ttf-material-design-icons-extended waybar-hyprland hyprland rofi dunst kitty gammastep swaybg swaylock-effects swayidle pamixer light brillo wlogout qt5ct wofi slurp swappy grim swww noto-fonts noto-fonts-cjk noto-fonts-tc ttf-tw adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts pavucontrol brightnessctl;
+      yay -S base-devel neovim kvantum lsd bat noto-fonts-emoji mpv python-pip ripgrep  lazygit npm pnpm zsh  github-cli  p7zip btop  ttf-jetbrains-mono-nerd cava-git  wl-clipboard  ttf-font-awesome ttf-iosevka-nerd ttf-material-design-icons-extended waybar-hyprland hyprland rofi dunst kitty gammastep swaybg swaylock-effects swayidle pamixer light brillo wlogout qt5ct wofi slurp swappy grim swww noto-fonts noto-fonts-cjk noto-fonts-tc ttf-tw adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts pavucontrol brightnessctl dolphin nwg-look;
 
       # Default rustup
       rustup default stable
@@ -53,7 +53,7 @@ case $base_res in
      break;;
   * )
      echo -e "\n Installing packages..."
-     yay -S zsh anki bitwarden steam discord vivaldi wine qbittorrent spotify spotify-adblock winetricks lib32-libpulse
+     yay -S zsh anki bitwarden  discord vivaldi  qbittorrent spotify spotify-adblock  lib32-libpulse
      sudo cp -r etc/* /etc/
      break;;
 esac
