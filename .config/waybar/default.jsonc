@@ -20,8 +20,8 @@
       "3": "",
       "4": "",
       "default": "󰊠",
-      "active": "󰮯",
-      // "active": "",
+      // "active": "󰮯",
+      "active": "",
       "urgent": "󰊠"
     }
   },
@@ -47,8 +47,8 @@
   },
   "clock": {
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format": "{: %I:%M}",
-    "format-alt": "{: %Y-%m-%d}"
+    "format": "{:  %I:%M}",
+    "format-alt": "{:  %Y-%m-%d}"
   },
   "backlight": {
     "device": "intel_backlight",
@@ -123,8 +123,9 @@
     "format-ethernet": "",
     "format-disconnected": "睊",
     "tooltip-format": " {ifname} via {gwaddr}",
-    "on-click": "bash ~/.config/waybar/scripts/rofi-wifi-menu.sh",
-    "format-disconnected": "Disconnected  "
+    "on-click-right": "bash ~/.config/waybar/scripts/rofi-wifi-menu.sh",
+    "format-disconnected": "Disconnected  ",
+    "format-alt": "󰀂  {ipaddr}/{cidr}"
   },
   "memory": {
     "interval": 30,

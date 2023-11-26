@@ -1,5 +1,16 @@
 #/bin/bash 
+cat << EOF
 
+___  ___       ______      _    __ _ _           
+|  \/  |       |  _  \    | |  / _(_) |          
+| .  . |_   _  | | | |___ | |_| |_ _| | ___  ___ 
+| |\/| | | | | | | | / _ \| __|  _| | |/ _ \/ __|
+| |  | | |_| | | |/ / (_) | |_| | | | |  __/\__ \
+\_|  |_/\__, | |___/ \___/ \__|_| |_|_|\___||___/
+         __/ |                                   
+        |___/                                    
+
+EOF
 #Update repos
 echo "Remember update your packages repositories"
 echo ""
@@ -30,7 +41,7 @@ case $hypr_res in
       break;;
   * ) 
       echo -e "\n Installing hyprland packages";
-      yay -S base-devel neovim kvantum lsd bat noto-fonts-emoji mpv python-pip ripgrep  lazygit npm pnpm zsh  github-cli  p7zip btop  ttf-jetbrains-mono-nerd cava-git  wl-clipboard  ttf-font-awesome ttf-iosevka-nerd ttf-material-design-icons-extended waybar-hyprland hyprland rofi dunst kitty gammastep swaybg swaylock-effects swayidle pamixer light brillo wlogout qt5ct wofi slurp swappy grim swww noto-fonts noto-fonts-cjk noto-fonts-tc ttf-tw adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts pavucontrol brightnessctl dolphin nwg-look;
+      yay -S base-devel neovim kvantum lsd bat noto-fonts-emoji mpv python-pip ripgrep  lazygit npm pnpm zsh  github-cli  p7zip btop  ttf-jetbrains-mono-nerd cava-git  wl-clipboard  ttf-font-awesome ttf-iosevka-nerd ttf-material-design-icons-extended waybar-hyprland hyprland rofi dunst kitty gammastep swaybg swaylock-effects swayidle pamixer light brillo wlogout qt5ct wofi slurp swappy grim swww noto-fonts noto-fonts-cjk noto-fonts-tc ttf-tw adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts pavucontrol brightnessctl dolphin nwg-look ark;
 
       # Default rustup
       rustup default stable
@@ -76,7 +87,9 @@ case $hack_res in
      rm strap.sh
 
      #Adding pentesting tools
-     yay -S nmap burpsuite wfuzz wireshark hydra metasploit aircrack-ng         
+     yay -S nmap burpsuite wfuzz wireshark hydra metasploit aircrack-ng exploitdb 
+
+     sudo cp -rf dirbuster /usr/share/
      break;;
 esac
 done
