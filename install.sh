@@ -89,6 +89,8 @@ case $hack_res in
      #Adding pentesting tools
      yay -S virtualbox nmap burpsuite wfuzz wireshark hydra metasploit aircrack-ng exploitdb 
 
+     sudo modprobe vboxdrv
+     sudo modprobe vboxnetflt
      sudo cp -rf dirbuster /usr/share/
      break;;
 esac
