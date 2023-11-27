@@ -87,7 +87,7 @@ case $hack_res in
      rm strap.sh
 
      #Adding pentesting tools
-     yay -S nmap burpsuite wfuzz wireshark hydra metasploit aircrack-ng exploitdb 
+     yay -S virtualbox nmap burpsuite wfuzz wireshark hydra metasploit aircrack-ng exploitdb 
 
      sudo cp -rf dirbuster /usr/share/
      break;;
