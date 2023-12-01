@@ -1,5 +1,5 @@
 [global]
-  font = "Product Sans"
+  font = "JetBrains Mono 10"
 
 	# Allow a small subset of html markup:
 	# <b>bold</b>
@@ -129,7 +129,7 @@
 	separator_height = 3
 
 	# Padding between text and separator
-	padding = 16
+	padding = 13
 
 	# Horizontal padding
 	horizontal_padding = 12

@@ -14,7 +14,8 @@
   "height": 20,
   "modules-left": [
     "custom/power-menu",
-    "hyprland/workspaces"
+    "hyprland/workspaces",
+    "custom/target"
     // "custom/separator-left"
   ],
   "modules-center": ["custom/media"],

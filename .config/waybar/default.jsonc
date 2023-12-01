@@ -33,6 +33,14 @@
     "on-click": "asusctl profile -n; pkill -SIGRTMIN+8 waybar",
     "signal": 8
   },
+  "custom/target": {
+    "format": "󰓾 {}",
+    "on-click-right": "cat $HOME/.config/bin/target | tail -1 | wl-copy | notify-send 'Target Ip was copied to clipboard' ",
+    "format-alt": "󰓾 Target IP",
+    "interval": 100,
+    "exec": "cat $HOME/.config/bin/target | tail -1"
+  },
+
   "custom/weather": {
     //shows the current weather and forecast
     "tooltip": true,
