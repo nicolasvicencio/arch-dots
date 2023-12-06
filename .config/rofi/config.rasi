@@ -1,119 +1,87 @@
-/*config*/
 configuration {
-    show-icons:                 true;
-    drun-display-format:        "{name}";
+  display-drun: "Applications:";
+  display-window: "Windows:";
+  drun-display-format: "{name}";
+  font: "JetBrainsMono Nerd Font Medium 10";
+  modi: "window,run,drun";
+  
+  // enabling the icons
+  show-icons: true;
+  icon-theme: "Dracula";
 }
 
-
+@theme "/dev/null"
 
 * {
-    font: "JetBrainsMono 12";
+  bg: #1e1e2e66;
+  bg-alt: #585b7066;
+  bg-selected: #31324466;
+
+  fg: #cdd6f4;
+  fg-alt: #7f849c;
+
+  
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
 }
 
-
-/*window*/
 window {
-    width: 800px;
-
-    border: 0px solid;
-    border-color: @foreground;
-    border-radius: 12px;
-
-    background-color: #11111b ;
-    padding: 0px;
+  width: 30%;
+  background-color: @bg;
 }
 
-
-/*container!*/
-mainbox {
-    spacing: 10px;
-    padding: 20px;
-    children: [ "inputbar", "listview" ];
-}
-
-
-/*inputbar*/
-
-/*-conteiner inputbar*/
-inputbar {
-    spacing: 10px;
-    padding: 5px;
-    border-radius: 20px;
-    background-color: #11111b ;
-    text-color: #cdd6f4 ;
-    children: [ "textbox-prompt-colon", "entry" ];
-}
-
-/*-icons*/
-textbox-prompt-colon {
-    expand: false;
-    str: "";
-    background-color: inherit;
-    text-color: inherit;
-    vertical-align: 0.5;
-}
-
-/*-promt*/
-entry {
-    background-color: inherit;
-    text-color: inherit;
-    placeholder: "Search";
-    placeholder-color: inherit;
-}
-
-/*list elemens*/
-listview {
-    columns: 2;
-    lines: 6;
-    scrollbar: false;
-    spacing: 10px;
-    text-color: #cdd6f4;
-    background-color: transparent;
-    border: 0px;
-}
-
-
-/*elements*/
 element {
-    spacing: 15px;
-    padding: 8px;
-    border-radius: 10px;
-    background-color: #11111b;
-    text-color:#cdd6f4;
+  padding: 8 12;
+  background-color: transparent;
+  text-color: @fg-alt;
 }
 
-element.normal.normal {
-    background-color: #1e1e2e;
-    text-color:#cdd6f4;
+element selected {
+  text-color: @fg;
+  background-color: @bg-selected;
 }
 
-
-element.alternate.normal {
-    background-color: #1e1e2e;
-    text-color: #cdd6f4;
-}
-
-element.selected.normal {
-    background-color: #b4befe;
-    text-color: #11111b;
+element-text {
+  background-color: transparent;
+  text-color: inherit;
+  vertical-align: 0.5;
 }
 
 element-icon {
-    background-color: transparent;
-    text-color: inherit;
-    size: 32px;
-}
-element-text {
-    background-color: transparent;
-    text-color:  inherit;
-    vertical-align: 0.5;
+  size: 14;
+  padding: 0 10 0 0;
+  background-color: transparent;
 }
 
+entry {
+  padding: 12;
+  background-color: @bg-alt;
+  text-color: @fg;
+}
 
+inputbar {
+  children: [prompt, entry];
+  background-color: @bg;
+}
 
+listview {
+  background-color: @bg;
+  columns: 1;
+  lines: 10;
+}
 
+mainbox {
+  children: [inputbar, listview];
+  background-color: @bg;
+}
 
+prompt {
+  enabled: true;
+  padding: 12 0 0 12;
+  background-color: @bg-alt;
+  text-color: @fg;
+}
 
-
-
-
+/* vim: ft=sass
