@@ -1,6 +1,6 @@
 #/bin/bash 
-cat << EOF
-
+echo -e "${GREEN}"
+cat <<"EOF"
 ___  ___       ______      _    __ _ _           
 |  \/  |       |  _  \    | |  / _(_) |          
 | .  . |_   _  | | | |___ | |_| |_ _| | ___  ___ 
@@ -11,6 +11,8 @@ ___  ___       ______      _    __ _ _
         |___/                                    
 
 EOF
+echo -e "${NONE}"
+
 #Update repos
 echo "Remember update your packages repositories"
 echo ""
@@ -49,7 +51,7 @@ case $hypr_res in
 
       #Get configs
       cp -r .config/* $HOME/.config;
-      cp -rf theme/* $HOME;
+      sudo  cp -rf theme/* $HOME/;
       break;;
 esac
 done
@@ -86,6 +88,8 @@ case $hack_res in
      sudo ./strap.sh
      sudo yay -Syu
      rm strap.sh
+
+     sudo pacman -Syyu
 
      #Adding pentesting tools
      yay -S virtualbox nmap burpsuite wfuzz wireshark hydra metasploit aircrack-ng exploitdb 
