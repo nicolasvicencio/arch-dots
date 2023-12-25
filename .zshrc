@@ -29,13 +29,29 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 function settarget(){
 	if [ $# -eq 1 ]; then
-	echo $1 > ~/.config/bin/target
+	echo $1 > ~/.config/waybar/target
 	elif [ $# -gt 2 ]; then
 	echo "settarget [IP] [NAME] | settarget [IP]"
 	else
-	echo $1 $2 > ~/.config/bin/target
+	echo $1 $2 > ~/.config/waybar/target
 	fi
 }
+
+declare -A pomo_options
+pomo_options["work"]="25"
+pomo_options["break"]="10"
+
+pomodoro () {
+  if [ -n "$1" -a -n "${pomo_options["$1"]}" ]; then
+  val=$1
+  echo $val | lolcat
+  timer ${pomo_options["$val"]}m
+  spd-say "'$val' session done"
+  fi
+}
+
+alias wo="pomodoro 'work'"
+alias br="pomodoro 'break'"
 
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search)
 

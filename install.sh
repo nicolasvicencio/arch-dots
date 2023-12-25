@@ -1,4 +1,4 @@
-#/bin/bash 
+#!/bin/bash 
 echo -e "${GREEN}"
 cat <<"EOF"
 ___  ___       ______      _    __ _ _           

@@ -35,10 +35,10 @@
   },
   "custom/target": {
     "format": "󰓾 {}",
-    "on-click-right": "cat $HOME/.config/bin/target | tail -1 | wl-copy | notify-send 'Target Ip was copied to clipboard' ",
+    "on-click-right": "cat target | tail -1 | wl-copy | notify-send 'Target Ip was copied to clipboard' ",
     "format-alt": "󰓾 Target IP",
     "interval": 100,
-    "exec": "cat $HOME/.config/bin/target | tail -1"
+    "exec": "cat target | tail -1"
   },
 
   "custom/weather": {
