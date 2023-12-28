@@ -67,7 +67,7 @@ case $base_res in
      break;;
   * )
      echo -e "\n Installing packages..."
-     yay -S zsh anki bitwarden vlc discord vivaldi qbittorrent spotify spotify-adblock lib32-libpulse
+     yay -S zsh anki bitwarden vlc discord vivaldi qbittorrent zsh spotify spotify-adblock lib32-libpulse obsidian
      sudo cp -r etc/* /etc/
      break;;
 esac
