@@ -174,7 +174,7 @@
     // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
   },
   "custom/power-menu": {
-    "format": " <span color='#6a92d7'>⏻ </span>",
+    "format": " <span color='#a6adc8'>󰣇 </span>",
     "on-click": "bash ~/.config/waybar/scripts/power-menu/powermenu.sh"
   },
   "custom/launcher": {
