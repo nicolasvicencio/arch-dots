@@ -1,9 +1,9 @@
 {
   "hyprland/window": {
-    "format": "{}",
+    "format": "{title}",
     "separate-outputs": true,
     "rewrite": {
-      "${USER}@${set_sysname}:(.*)": "  $1",
+      // "${USER}@${set_sysname}:(.*)": "Arch",
       "(.*)kitty": "  Terminal",
       "(.*) — Vivaldi": "󰈹 $1",
       "(.*)Vivaldi": "󰈹 Vivaldi",

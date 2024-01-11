@@ -32,6 +32,17 @@ window#waybar {
   background: @bar-bg;
 }
 
+window#waybar.empty {
+  background: transparent;
+}
+
+window#waybar.empty #window {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
 tooltip {
   background: @main-bg;
   color: @main-fg;
