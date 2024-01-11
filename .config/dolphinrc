@@ -1,0 +1,31 @@
+MenuBar=Disabled
+
+[FoldersPanel]
+HiddenFilesShown=true
+
+[General]
+LockPanels=false
+Version=202
+ViewPropsTimestamp=2024,1,10,23,31,48.727
+
+[InformationPanel]
+showHovered=false
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=22
+
+[KPropertiesDialog]
+1600x900 screen: Window-Maximized=true
+
+[MainWindow]
+MenuBar=Disabled
+ToolBarsMovable=Disabled
+
+[MainWindow][Toolbar mainToolBar]
+IconSize=16
+ToolButtonStyle=IconOnly
+
+[Toolbar mainToolBar]
+IconSize=16
+ToolButtonStyle=IconOnly

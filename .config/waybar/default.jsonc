@@ -1,30 +1,47 @@
 {
   "hyprland/window": {
-    "format": " {}",
-    // "max-length": 20,
+    "format": "{}",
+    "separate-outputs": true,
     "rewrite": {
-      "(.*) - Vivaldi": " vivaldi",
-      "Spotify": "🎼 spotify"
-    }
+      "${USER}@${set_sysname}:(.*)": "  $1",
+      "(.*)kitty": "  Terminal",
+      "(.*) — Vivaldi": "󰈹 $1",
+      "(.*)Vivaldi": "󰈹 Vivaldi",
+      "(.*) — Dolphin": "󰉋 $1",
+      "(.*)Spotify": "󰓇 Spotify",
+      "(.*)Steam": "󰓓 Steam",
+      "(.*)Anki": "󰓓 Anki",
+      "(.*)Discord": "󰙯 Discord",
+      "(.*)Obsidian(.*)": "󰈙 Obsidian"
+    },
+    "max-length": 1000
   },
   "hyprland/workspaces": {
-    "format": "{icon}",
-    "all-outputs": false,
-    "persistent_workspaces": {
-      "*": 4
-    },
+    "disable-scroll": true,
+    "all-outputs": true,
+    "active-only": false,
+    "show-special": false,
     "on-click": "activate",
-    "format-icons": {
-      "1": "",
-      "2": "",
-      "3": "",
-      "4": "",
-      "default": "󰊠",
-      // "active": "󰮯",
-      "active": "",
-      "urgent": "󰊠"
-    }
+    "persistent-workspaces": {}
   },
+  // "hyprland/workspaces": {
+  //   "format": "{icon}",
+  //   "all-outputs": false,
+  //   "persistent_workspaces": {
+  //     "*": 4
+  //   },
+  //   "on-click": "activate",
+  //   "format-icons": {
+  //     "1": "",
+  //     "2": "",
+  //     "3": "",
+  //     "4": "",
+  //     "default": "󰊠",
+  //     // "active": "󰮯",
+  //     "active": "",
+  //     "urgent": "󰊠"
+  //   }
+  // },
   "custom/power_profile": {
     //shows the current power profile and switches to next on click
     "exec": "asusctl profile -p | sed s:'Active profile is'::",
@@ -50,18 +67,36 @@
     "return-type": "json"
   },
   "tray": {
-    "icon-size": 16,
+    "icon-size": 14,
     "spacing": 10
   },
   "clock": {
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format": "{:  %I:%M}",
-    "format-alt": "{:  %Y-%m-%d}"
+    "format": "{: %I:%M %p}",
+    "format-alt": "{:%R 󰃭 %d·%m·%y}",
+    "tooltip-format": "<tt>{calendar}</tt>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "on-scroll": 1,
+      "on-click-right": "mode",
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b>{}</b></span>"
+      }
+    },
+    "actions": {
+      "on-click-right": "mode",
+      "on-click-forward": "tz_up",
+      "on-click-backward": "tz_down",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    }
   },
   "backlight": {
     "device": "intel_backlight",
     "format": "{icon} {percent}%",
-    "format-icons": ["󰃞", "󰃟", "󰃠"],
+    "format-icons": ["", "", "", "", "", "", "", "", ""],
     "on-scroll-up": "brightnessctl set 1%+",
     "on-scroll-down": "brightnessctl set 1%-",
     "min-length": 6
@@ -116,6 +151,12 @@
     "critical-threshold": 80,
     "format-critical": "{temperatureC}°C "
   },
+  "cpu": {
+    "interval": 10,
+    "format": "󰍛 {usage}%",
+    "format-alt": "{icon0}{icon1}{icon2}{icon3}",
+    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
+  },
 
   // "network": {
   //   // "interface": "wlp2*", // (Optional) To force the use of this interface
@@ -128,7 +169,7 @@
   // },
   "network": {
     "format-wifi": " ",
-    "format-ethernet": "",
+    "format-ethernet": "󰈀",
     "format-disconnected": "睊",
     "tooltip-format": " {ifname} via {gwaddr}",
     "on-click-right": "bash ~/.config/waybar/scripts/rofi-wifi-menu.sh",
@@ -174,7 +215,7 @@
     // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
   },
   "custom/power-menu": {
-    "format": " <span color='#a6adc8'>󰣇 </span>",
+    "format": " <span color='#93cee9'>󰣇 </span>",
     "on-click": "bash ~/.config/waybar/scripts/power-menu/powermenu.sh"
   },
   "custom/launcher": {

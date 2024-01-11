@@ -72,7 +72,8 @@ case $hypr_res in
 
       #Get configs
       cp -r .config/* $HOME/.config;
-      sudo  cp -rf theme/* $HOME/;
+      sudo cp -rf theme/* $HOME/;
+      sudo cp -rf .local/share/* $HOME/.local/share/
       break;;
 esac
 done

@@ -8,13 +8,11 @@
   "gtk-layer-shell": true,
   "padding-left": 10,
   "padding-right": 10,
-  "margin-top": 3,
-  "margin-left": 10,
-  "margin-right": 10,
   "height": 20,
   "modules-left": [
     "custom/power-menu",
-    "hyprland/workspaces"
+    "hyprland/workspaces",
+    "hyprland/window"
     // "custom/target"
     // "custom/separator-left"
   ],
