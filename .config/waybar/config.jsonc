@@ -12,13 +12,15 @@
   "modules-left": [
     "custom/power-menu",
     "hyprland/workspaces",
-    "hyprland/window"
+    "hyprland/window",
+    "cava"
     // "custom/target"
     // "custom/separator-left"
   ],
   "modules-center": ["custom/media"],
   "modules-right": [
     "tray",
+    "hyprland/keyboard-state",
     "backlight",
     "battery",
     "pulseaudio",
