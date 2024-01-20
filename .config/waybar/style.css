@@ -32,9 +32,9 @@ window#waybar {
   background: @bar-bg;
 }
 
-window#waybar.empty {
-  background: transparent;
-}
+/* window#waybar.empty { */
+/*   background: transparent; */
+/* } */
 
 window#waybar.empty #window {
   background: transparent;

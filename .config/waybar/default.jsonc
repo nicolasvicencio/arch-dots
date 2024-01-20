@@ -10,33 +10,11 @@
       "(.*) — Dolphin": "󰉋 $1",
       "(.*)Spotify": "󰓇 Spotify",
       "(.*)Steam": "󰓓 Steam",
-      "(.*)Anki": "󰓓 Anki",
+      "(.*)Anki": " Anki",
       "(.*)Discord": "󰙯 Discord",
       "(.*)Obsidian(.*)": "󰈙 Obsidian"
     },
     "max-length": 1000
-  },
-  "cava": {
-    //        "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
-    "framerate": 30,
-    "autosens": 1,
-    "sensitivity": 100,
-    "bars": 14,
-    "lower_cutoff_freq": 50,
-    "higher_cutoff_freq": 10000,
-    "method": "pulse",
-    "source": "auto",
-    "stereo": true,
-    "reverse": false,
-    "bar_delimiter": 0,
-    "monstercat": false,
-    "waves": false,
-    "noise_reduction": 0.77,
-    "input_delay": 2,
-    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
-    "actions": {
-      "on-click-right": "mode"
-    }
   },
   // "hyprland/workspaces": {
   //   "disable-scroll": true,
@@ -99,8 +77,8 @@
     "spacing": 10
   },
   "clock": {
-    "format": "{: %I:%M %p}",
-    "format-alt": "{:%R 󰃭 %d·%m·%y}",
+    "format": " {:%I:%M %p}",
+    "format-alt": " {:%R 󰃭 %y·%m·%d}",
     "tooltip-format": "<tt>{calendar}</tt>",
     "calendar": {
       "mode": "month",
@@ -197,7 +175,7 @@
   // },
   "network": {
     "format-wifi": " ",
-    "format-ethernet": "󰈀",
+    "format-ethernet": "  Wired",
     "format-disconnected": "睊",
     "tooltip-format": " {ifname} via {gwaddr}",
     "on-click-right": "bash ~/.config/waybar/scripts/rofi-wifi-menu.sh",
@@ -218,29 +196,34 @@
     "tooltip-format-connected": " {device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}"
   },
-
   "custom/spotify": {
-    "exec": "python3 ~/.config/waybar/scripts/mediaplayer.py --player spotify",
-    "format": "{}  ",
+    // "format": "{} ",
+    "format": "<span color='#1ED760'> </span> {} ",
+    "exec": "~/.config/waybar/scripts/spotify.sh",
     "return-type": "json",
-    "on-click": "playerctl play-pause",
-    "on-click-right": "playerctl next",
-    "on-scroll-down": "playerctl previous"
+    "on-click": "playerctl -p spotify play-pause",
+    "on-scroll-up": "playerctl -p spotify next",
+    "on-scroll-down": "playerctl -p spotify previous",
+    "exec-if": "pgrep spotfiy",
+    "escape": true
   },
   "custom/media": {
+    // "format": "  {} ",
     "format": "{icon} {}",
-    "on-click": "playerctl play-pause",
-    "on-click-right": "playerctl next",
-    "on-scroll-down": "playerctl previous",
+    "on-click": "playerctl -p spotify play-pause",
+    "on-scroll-up": "playerctl -p spotify next",
+    "on-scroll-down": "playerctl -p spotify previous",
     "return-type": "json",
+    "interval": 30, // Remove this if your script is endless and write in loop
     "max-length": 40,
     "format-icons": {
       "spotify": "",
       "default": "🎜"
     },
     "escape": true,
-    "exec": "python3 $HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null" // Script in resources folder
-    // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    "exec-if": "pgrep spotify",
+    // "exec": "python3 $HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null" // Script in resources folder
+    "exec": "python3 $HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
   },
   "custom/power-menu": {
     "format": " <span color='#93cee9'>󰣇 </span>",
