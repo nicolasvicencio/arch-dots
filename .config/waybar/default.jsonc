@@ -204,7 +204,7 @@
     "on-click": "playerctl -p spotify play-pause",
     "on-scroll-up": "playerctl -p spotify next",
     "on-scroll-down": "playerctl -p spotify previous",
-    "exec-if": "pgrep spotfiy",
+    // "exec-if": "pgrep spotfiy",
     "escape": true
   },
   "custom/media": {
