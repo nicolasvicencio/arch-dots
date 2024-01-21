@@ -64,7 +64,7 @@ case $hypr_res in
       break;;
   * ) 
       echo -e "\n Installing hyprland packages";
-      yay -S base-devel neovim kvantum lsd bat noto-fonts-emoji mpv python-pip ripgrep  lazygit npm pnpm zsh  github-cli  p7zip btop  ttf-jetbrains-mono-nerd cava-git  wl-clipboard  ttf-font-awesome ttf-iosevka-nerd ttf-material-design-icons-extended waybar-hyprland hyprland rofi dunst kitty gammastep swaybg swaylock-effects swayidle pamixer light brillo wlogout qt5ct wofi slurp swappy grim swww noto-fonts noto-fonts-cjk noto-fonts-tc ttf-tw adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts pavucontrol brightnessctl dolphin nwg-look ark ranger python-pillow wl-clipboard vlc spd-say lolcat timer espeakup
+      yay -S base-devel neovim kvantum lsd bat noto-fonts-emoji mpv python-pip ripgrep  lazygit npm pnpm zsh  github-cli  p7zip btop  ttf-jetbrains-mono-nerd cava-git  wl-clipboard  ttf-font-awesome ttf-iosevka-nerd ttf-material-design-icons-extended waybar-hyprland hyprland rofi dunst kitty gammastep swaybg swaylock-effects swayidle pamixer light brillo wlogout qt5ct wofi slurp swappy grim swww noto-fonts noto-fonts-cjk noto-fonts-tc ttf-tw adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts pavucontrol brightnessctl dolphin nwg-look ark ranger python-pillow wl-clipboard vlc  wget
 
 
       # Default rustup
@@ -114,10 +114,15 @@ case $hack_res in
      sudo pacman -Syyu
 
      #Adding pentesting tools
-     yay -S virtualbox nmap burpsuite wfuzz wireshark hydra metasploit aircrack-ng exploitdb netdiscover wpscan whatweb wafw00f sqlmap hashcat  dirb nikto dnsenum crunch 
+     yay -S virtualbox nmap burpsuite wfuzz wireshark hydra metasploit aircrack-ng exploitdb netdiscover wpscan whatweb wafw00f sqlmap hashcat  dirb nikto dnsenum crunch steghide python-uncompyle6
      sudo modprobe vboxdrv
      sudo modprobe vboxnetflt
-     sudo cp -rf dirbuster /usr/share/
+
+     git clone https://github.com/danielmiessler/SecLists
+     sudo mv Seclist /usr/share/wordlists
+     wget https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt
+     sudo mv rockyou.txt /usr/share/wordlists
+
      break;;
 esac
 done
