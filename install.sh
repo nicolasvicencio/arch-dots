@@ -72,7 +72,8 @@ case $hypr_res in
 
       #Get configs
       cp -r .config/* $HOME/.config;
-      sudo cp -rf theme/* $HOME/;
+      sudo cp -rf theme/.icons $HOME/;
+      sudo cp -rf theme/.themes $HOME/;
       sudo cp -rf .local/share/* $HOME/.local/share/
 
       # Check and set Zsh as the default shell
@@ -107,7 +108,7 @@ case $base_res in
      break;;
   * )
      echo -e "\n Installing packages..."
-     yay -S zsh anki bitwarden vlc discord vivaldi qbittorrent zsh spotify spotify-adblock obsidian
+     yay -S anki bitwarden vlc discord vivaldi qbittorrent spotify spotify-adblock obsidian
      sudo cp -r etc/* /etc/
      break;;
 esac
@@ -132,12 +133,13 @@ case $hack_res in
      sudo pacman -Syyu
 
      #Adding pentesting tools
-     yay -S virtualbox nmap burpsuite wfuzz wireshark hydra metasploit aircrack-ng exploitdb netdiscover wpscan whatweb wafw00f sqlmap hashcat  dirb nikto dnsenum crunch steghide python-uncompyle6 enum4linux openvpn
+     yay -S virtualbox nmap burpsuite wfuzz wireshark hydra metasploit aircrack-ng exploitdb netdiscover wpscan whatweb wafw00f sqlmap hashcat  dirb nikto dnsenum crunch steghide python-uncompyle6 enum4linux openvpn gobuster
+
      sudo modprobe vboxdrv
      sudo modprobe vboxnetflt
 
      git clone https://github.com/danielmiessler/SecLists
-     sudo mv Seclist /usr/share/
+     sudo mv Seclists /usr/share/
      wget https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt
      sudo mv rockyou.txt /usr/share/SecLists
 
