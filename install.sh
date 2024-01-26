@@ -139,7 +139,7 @@ case $hack_res in
      git clone https://github.com/danielmiessler/SecLists
      sudo mv Seclist /usr/share/
      wget https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt
-     sudo mv rockyou.txt /usr/share/
+     sudo mv rockyou.txt /usr/share/SecLists
 
      break;;
 esac
