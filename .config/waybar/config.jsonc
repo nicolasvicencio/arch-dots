@@ -12,9 +12,7 @@
   "modules-left": [
     "custom/power-menu",
     "hyprland/workspaces",
-    "hyprland/window"
-    // "custom/target"
-    // "custom/separator-left"
+    "hyprland/window",
   ],
   "modules-center": ["custom/spotify"],
   "modules-right": [
@@ -24,7 +22,9 @@
     "pulseaudio",
     // "pulseaudio#microphone",
     "memory",
+    "custom/target",
     "network",
-    "clock"
-  ]
+    "clock",
+    "custom/gamma",
+  ],
 }

@@ -12,9 +12,15 @@
       "(.*)Steam": "󰓓 Steam",
       "(.*)Anki": " Anki",
       "(.*)Discord": "󰙯 Discord",
-      "(.*)Obsidian(.*)": "󰈙 Obsidian"
+      "(.*)Obsidian(.*)": "󰈙 Obsidian",
     },
-    "max-length": 1000
+    "max-length": 1000,
+  },
+  "custom/gamma": {
+    // "format": "󰌶",
+    "format": "󰌵",
+    "on-click": "exec gammastep -O 2300",
+    "on-click-right": "pkill gammastep",
   },
   // "hyprland/workspaces": {
   //   "disable-scroll": true,
@@ -37,16 +43,16 @@
     "format": "{icon}",
     "all-outputs": false,
     "persistent_workspaces": {
-      "*": 4
+      "*": 4,
     },
     "on-click": "activate",
     "format-icons": {
       "1": "1",
       "2": "2",
       "3": "3",
-      "4": "4"
+      "4": "4",
       // "active": "󰮯",
-    }
+    },
   },
   "custom/power_profile": {
     //shows the current power profile and switches to next on click
@@ -54,14 +60,14 @@
     "interval": 30,
     "format": "󰈐{}",
     "on-click": "asusctl profile -n; pkill -SIGRTMIN+8 waybar",
-    "signal": 8
+    "signal": 8,
   },
   "custom/target": {
-    "format": "󰓾 {}",
+    "format-alt": "󰓾 {}",
     "on-click-right": "cat target | tail -1 | wl-copy | notify-send 'Target Ip was copied to clipboard' ",
-    "format-alt": "󰓾 Target IP",
+    "format": "󰓾 Target",
     "interval": 100,
-    "exec": "cat target | tail -1"
+    "exec": "cat target | tail -1",
   },
 
   "custom/weather": {
@@ -70,11 +76,11 @@
     "format": "{}",
     "interval": 300,
     "exec": "python3 ~/.config/waybar/scripts/weather.py",
-    "return-type": "json"
+    "return-type": "json",
   },
   "tray": {
     "icon-size": 14,
-    "spacing": 10
+    "spacing": 10,
   },
   "clock": {
     "format": " {:%I:%M %p}",
@@ -88,16 +94,16 @@
       "format": {
         "months": "<span color='#ffead3'><b>{}</b></span>",
         "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-        "today": "<span color='#ff6699'><b>{}</b></span>"
-      }
+        "today": "<span color='#ff6699'><b>{}</b></span>",
+      },
     },
     "actions": {
       "on-click-right": "mode",
       "on-click-forward": "tz_up",
       "on-click-backward": "tz_down",
       "on-scroll-up": "shift_up",
-      "on-scroll-down": "shift_down"
-    }
+      "on-scroll-down": "shift_down",
+    },
   },
   "backlight": {
     "device": "intel_backlight",
@@ -105,20 +111,20 @@
     "format-icons": ["", "", "", "", "", "", "", "", ""],
     "on-scroll-up": "brightnessctl set 1%+",
     "on-scroll-down": "brightnessctl set 1%-",
-    "min-length": 6
+    "min-length": 6,
   },
 
   "battery": {
     "states": {
       "good": 95,
       "warning": 30,
-      "critical": 20
+      "critical": 20,
     },
     "format": "{icon} {capacity}%",
     "format-charging": " {capacity}%",
     "format-plugged": " {capacity}%",
     "format-alt": "{time} {icon}",
-    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
   },
 
   "pulseaudio": {
@@ -137,8 +143,8 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": ["", "", ""]
-    }
+      "default": ["", "", ""],
+    },
   },
 
   "pulseaudio#microphone": {
@@ -148,20 +154,20 @@
     "on-click": "pamixer --default-source -t",
     "on-scroll-up": "pamixer --default-source -i 5",
     "on-scroll-down": "pamixer --default-source -d 5",
-    "scroll-step": 5
+    "scroll-step": 5,
   },
 
   "temperature": {
     "thermal-zone": 1,
     "format": "{temperatureF}°F ",
     "critical-threshold": 80,
-    "format-critical": "{temperatureC}°C "
+    "format-critical": "{temperatureC}°C ",
   },
   "cpu": {
     "interval": 10,
     "format": "󰍛 {usage}%",
     "format-alt": "{icon0}{icon1}{icon2}{icon3}",
-    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
+    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
   },
 
   // "network": {
@@ -180,13 +186,13 @@
     "tooltip-format": " {ifname} via {gwaddr}",
     "on-click-right": "bash ~/.config/waybar/scripts/rofi-wifi-menu.sh",
     "format-disconnected": "Disconnected  ",
-    "format-alt": "󰀂  {ipaddr}/{cidr}"
+    "format-alt": "󰀂  {ipaddr}/{cidr}",
   },
   "memory": {
     "interval": 30,
     "format": " {}%",
     "format-alt": " {used:0.1f}GB",
-    "max-length": 10
+    "max-length": 10,
   },
   "bluetooth": {
     "format": " {status}",
@@ -194,7 +200,7 @@
     "format-connected": " {num_connections}",
     "tooltip-format": "{device_alias}",
     "tooltip-format-connected": " {device_enumerate}",
-    "tooltip-format-enumerate-connected": "{device_alias}"
+    "tooltip-format-enumerate-connected": "{device_alias}",
   },
   "custom/spotify": {
     // "format": "{} ",
@@ -205,7 +211,7 @@
     "on-scroll-up": "playerctl -p spotify next",
     "on-scroll-down": "playerctl -p spotify previous",
     // "exec-if": "pgrep spotfiy",
-    "escape": true
+    "escape": true,
   },
   "custom/media": {
     // "format": "  {} ",
@@ -218,32 +224,32 @@
     "max-length": 40,
     "format-icons": {
       "spotify": "",
-      "default": "🎜"
+      "default": "🎜",
     },
     "escape": true,
     "exec-if": "pgrep spotify",
     // "exec": "python3 $HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null" // Script in resources folder
-    "exec": "python3 $HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    "exec": "python3 $HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null", // Filter player based on name
   },
   "custom/power-menu": {
     "format": " <span color='#93cee9'>󰣇 </span>",
-    "on-click": "bash ~/.config/waybar/scripts/power-menu/powermenu.sh"
+    "on-click": "bash ~/.config/waybar/scripts/power-menu/powermenu.sh",
   },
   "custom/launcher": {
     "format": " <span color='#6a92d7'> </span>",
-    "on-click": "rofi -show drun"
+    "on-click": "rofi -show drun",
   },
   "custom/separator-right": {
     "format": "",
-    "tooltip": false
+    "tooltip": false,
   },
   "custom/separator-left": {
     "format": "",
-    "tooltip": false
+    "tooltip": false,
   },
 
   "group/stats": {
     "orientation": "horizontal",
-    "modules": ["temperature", "cpu", "memory", "disk"]
-  }
+    "modules": ["temperature", "cpu", "memory", "disk"],
+  },
 }
