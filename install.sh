@@ -64,7 +64,7 @@ case $hypr_res in
       break;;
   * ) 
       echo -e "\n Installing hyprland packages";
-      yay -S base-devel neovim kvantum lsd bat noto-fonts-emoji mpv python-pip ripgrep  lazygit npm pnpm zsh  github-cli  p7zip btop  ttf-jetbrains-mono-nerd cava-git  wl-clipboard  ttf-font-awesome ttf-iosevka-nerd ttf-material-design-icons-extended waybar-hyprland hyprland rofi dunst kitty gammastep swaybg swaylock-effects swayidle pamixer light brillo wlogout qt5ct wofi slurp swappy grim swww noto-fonts noto-fonts-cjk noto-fonts-tc dobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts pavucontrol brightnessctl dolphin nwg-look ark ranger python-pillow wl-clipboard vlc wget man neofetch sddm qt5-quickcontrols2 qt5-graphicaleffects apple-fonts
+      yay -S base-devel neovim kvantum lsd bat noto-fonts-emoji mpv python-pip ripgrep  lazygit npm pnpm zsh  github-cli  p7zip btop  ttf-jetbrains-mono-nerd cava-git  wl-clipboard  ttf-font-awesome ttf-iosevka-nerd ttf-material-design-icons-extended waybar hyprland rofi dunst kitty gammastep swaybg swaylock-effects swayidle pamixer light brillo wlogout qt5ct wofi slurp swappy grim swww noto-fonts noto-fonts-cjk noto-fonts-tc dobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts pavucontrol brightnessctl dolphin nwg-look ark ranger python-pillow wl-clipboard vlc wget man neofetch sddm qt5-quickcontrols2 qt5-graphicaleffects apple-fonts
 
 
       # Default rustup
@@ -75,9 +75,10 @@ case $hypr_res in
       sudo cp -rf theme/.icons $HOME/;
       sudo cp -rf theme/.themes $HOME/;
       sudo cp -rf .local/share/* $HOME/.local/share/
-      sudo cp -rf usr /usr/
+      sudo cp -rf usr/lib/sddm /usr/lib/
+      sudo cp -rf usr/share/sddm /usr/share/
       
-      systemctl enable sddm.service
+      sudo systemctl enable sddm.service
 
       # Check and set Zsh as the default shell
       [[ "$(awk -F: -v user="$USER" '$1 == user {print $NF}' /etc/passwd) " =~ "zsh " ]] || chsh -s $(which zsh)
