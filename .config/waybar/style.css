@@ -22,7 +22,8 @@
 * {
   border: none;
   border-radius: 0;
-  font-family: "JetBrainsMono Nerd Font";
+  /* font-family: "JetBrainsMono Nerd Font"; */
+  font-family: "San Francisco";
   font-weight: bold;
   font-size: 10px;
   min-height: 0;
@@ -102,7 +103,8 @@ tooltip {
 #tray,
 #backlight {
   color: @main-fg;
-  background: @main-bg;
+  /* background: @main-bg; */
+  background: transparent;
   opacity: 1;
   margin: 2px 0px 2px 0px;
   padding-left: 8px;
