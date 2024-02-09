@@ -70,13 +70,16 @@ case $hypr_res in
       # Default rustup
       rustup default stable
 
+      # Dolphin default file manager
+      sudo xdg-mime default dolphin.desktop inode/directory
+
       #Get configs
       cp -r .config/* $HOME/.config;
       sudo cp -rf theme/.icons $HOME/;
       sudo cp -rf theme/.themes $HOME/;
       sudo cp -rf .local/share/* $HOME/.local/share/
       sudo cp -rf usr/lib/sddm /usr/lib/
-      sudo cp -rf usr/share/sddm /usr/share/
+      sudo cp -rf usr/share/* /usr/share/
       
       sudo systemctl enable sddm.service
 
@@ -142,10 +145,8 @@ case $hack_res in
      sudo modprobe vboxdrv
      sudo modprobe vboxnetflt
 
-     git clone https://github.com/danielmiessler/SecLists
-     sudo mv Seclists /usr/share/
-     wget https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt
-     sudo mv rockyou.txt /usr/share/SecLists
+     git clone https://github.com/danielmiessler/SecLists | sudo mv Seclists /usr/share/
+     wget https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt | sudo mv rockyou.txt /usr/share/SecLists
 
      break;;
 esac
