@@ -79,7 +79,7 @@ case $hypr_res in
       sudo cp -rf theme/.themes $HOME/;
       sudo cp -rf .local/share/* $HOME/.local/share/
       sudo cp -rf usr/lib/sddm /usr/lib/
-      sudo cp -rf usr/share/* /usr/share/
+      sudo cp -rf usr/share/sddm /usr/share/
       
       sudo systemctl enable sddm.service
 
@@ -117,6 +117,7 @@ case $base_res in
      echo -e "\n Installing packages..."
      yay -S anki bitwarden vlc discord vivaldi qbittorrent spotify spotify-adblock obsidian
      sudo cp -r etc/* /etc/
+     sudo cp -rf usr/share/Anki2 /usr/share/
      break;;
 esac
 done
