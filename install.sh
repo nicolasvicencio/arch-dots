@@ -115,9 +115,17 @@ case $base_res in
      break;;
   * )
      echo -e "\n Installing packages..."
-     yay -S anki bitwarden vlc discord vivaldi qbittorrent spotify spotify-adblock obsidian
+     yay -S anki bitwarden vlc discord vivaldi qbittorrent spotify spotify-adblock obsidian gamemode lib32-gamemode
+
+     #Getting configs
      sudo cp -r etc/* /etc/
      sudo cp -rf usr/share/Anki2 /usr/share/
+
+     # Retrieving hosts file
+     wget https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn/hosts
+     wait
+     sudo mv hosts /etc/hosts
+
      break;;
 esac
 done
@@ -146,8 +154,13 @@ case $hack_res in
      sudo modprobe vboxdrv
      sudo modprobe vboxnetflt
 
-     git clone https://github.com/danielmiessler/SecLists | sudo mv Seclists /usr/share/
-     wget https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt | sudo mv rockyou.txt /usr/share/SecLists
+     git clone https://github.com/danielmiessler/SecLists 
+     wait
+     sudo mv Seclists /usr/share/
+
+     wget https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt 
+     wait
+     sudo mv rockyou.txt /usr/share/SecLists
 
      break;;
 esac
