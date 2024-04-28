@@ -64,7 +64,7 @@ case $hypr_res in
       break;;
   * ) 
       echo -e "\n Installing hyprland packages";
-      yay -S base-devel neovim kvantum lsd bat noto-fonts-emoji mpv python-pip ripgrep  lazygit npm pnpm zsh  github-cli  p7zip btop  ttf-jetbrains-mono-nerd cava-git  wl-clipboard  ttf-font-awesome ttf-iosevka-nerd ttf-material-design-icons-extended waybar hyprland rofi dunst kitty gammastep swaybg swaylock-effects swayidle pamixer light brillo wlogout qt5ct wofi slurp swappy grim swww noto-fonts noto-fonts-cjk noto-fonts-tc dobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts pavucontrol brightnessctl dolphin nwg-look ark ranger python-pillow wl-clipboard vlc wget man neofetch sddm qt5-quickcontrols2 qt5-graphicaleffects apple-fonts kvantum-qt5 qt6ct gamemode
+      yay -S base-devel neovim kvantum lsd bat noto-fonts-emoji mpv python-pip ripgrep  lazygit npm pnpm zsh  github-cli  p7zip btop  ttf-jetbrains-mono-nerd cava-git  wl-clipboard  ttf-font-awesome ttf-iosevka-nerd ttf-material-design-icons-extended waybar hyprland rofi dunst kitty gammastep swaybg swaylock-effects swayidle pamixer light brillo wlogout qt5ct wofi slurp swappy grim swww noto-fonts noto-fonts-cjk noto-fonts-tc dobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts pavucontrol brightnessctl dolphin nwg-look ark ranger python-pillow wl-clipboard vlc wget man neofetch sddm qt5-quickcontrols2 qt5-graphicaleffects apple-fonts kvantum-qt5 qt6ct gamemode qt5-wayland
 
 
       # Default rustup
