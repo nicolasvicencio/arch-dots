@@ -64,7 +64,7 @@ case $hypr_res in
       break;;
   * ) 
       echo -e "\n Installing hyprland packages";
-    yay -S base-devel neovim kvantum lsd bat noto-fonts-emoji python-pip ripgrep  lazygit npm pnpm zsh sddm  github-cli  p7zip btop  ttf-jetbrains-mono-nerd cava-git  wl-clipboard  ttf-font-awesome ttf-iosevka-nerd ttf-material-design-icons-extended waybar hyprland rofi-wayland dunst kitty gammastep swaybg swaylock-effects swayidle pamixer light brillo wlogout qt5ct slurp swappy grim swww noto-fonts noto-fonts-cjk noto-fonts-tc dobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts pavucontrol brightnessctl nwg-look ark ranger python-pillow wl-clipboard vlc wget man neofetch sddm qt5-quickcontrols2 qt5-graphicaleffects apple-fonts kvantum-qt5 qt6ct gamemode qt5-wayland polkit imagewriter archlinux-xdg-menu thunar tumbler gvfs
+    yay -S base-devel neovim kvantum lsd bat noto-fonts-emoji python-pip ripgrep  lazygit npm pnpm zsh sddm  github-cli  p7zip btop  ttf-jetbrains-mono-nerd cava-git  wl-clipboard  ttf-font-awesome ttf-iosevka-nerd ttf-material-design-icons-extended waybar hyprland rofi-wayland dunst kitty gammastep swaybg swaylock-effects swayidle pamixer light brillo wlogout qt5ct slurp swappy grim swww noto-fonts noto-fonts-cjk noto-fonts-tc dobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts pavucontrol brightnessctl nwg-look ark ranger python-pillow wl-clipboard vlc wget man neofetch sddm qt5-quickcontrols2 qt5-graphicaleffects apple-fonts kvantum-qt5 qt6ct gamemode qt5-wayland polkit imagewriter archlinux-xdg-menu thunar tumbler gvfs okular unrar
 
 
 
@@ -81,8 +81,6 @@ case $hypr_res in
       
       sudo systemctl enable sddm.service
 
-      # Default rustup
-      rustup default stable
 
       # Check and set Zsh as the default shell
       [[ "$(awk -F: -v user="$USER" '$1 == user {print $NF}' /etc/passwd) " =~ "zsh " ]] || chsh -s $(which zsh)
@@ -102,6 +100,9 @@ case $hypr_res in
       # Apply Zsh config
       cp .zshrc $HOME/.zshrc
       break;;
+
+      # Default rustup
+      rustup default stable
 esac
 done
 clear
