@@ -69,7 +69,7 @@ case $hypr_res in
 
 
       # Dolphin default file manager
-      sudo xdg-mime default dolphin.desktop inode/directory
+      sudo xdg-mime default thunar.desktop inode/directory
 
       #Get configs
       cp -r .config/* $HOME/.config;
