@@ -66,7 +66,7 @@ case $hypr_res in
       echo -e "\n Installing hyprland packages";
     yay -S base-devel neovim kvantum lsd bat noto-fonts-emoji python-pip ripgrep  lazygit npm pnpm zsh sddm  github-cli  p7zip btop  ttf-jetbrains-mono-nerd cava-git  wl-clipboard  ttf-font-awesome ttf-iosevka-nerd ttf-material-design-icons-extended waybar hyprland rofi-wayland dunst kitty gammastep swaybg swaylock-effects swayidle pamixer light brillo wlogout qt5ct slurp swappy grim swww noto-fonts noto-fonts-cjk noto-fonts-tc dobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts pavucontrol brightnessctl nwg-look ark ranger python-pillow wl-clipboard vlc wget man neofetch sddm qt5-quickcontrols2 qt5-graphicaleffects apple-fonts kvantum-qt5 qt6ct gamemode qt5-wayland polkit imagewriter archlinux-xdg-menu thunar tumbler gvfs okular unrar
 
-
+    yay -S mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon libva-mesa-driver libva-utils
 
       # Dolphin default file manager
       sudo xdg-mime default thunar.desktop inode/directory
@@ -102,7 +102,6 @@ case $hypr_res in
       break;;
 
       # Default rustup
-      rustup default stable
 esac
 done
 clear
