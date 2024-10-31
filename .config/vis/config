@@ -1,7 +1,0 @@
-colors.scheme=nord
-
-visualizer.spectrum.color.scheme=nord
-visualizer.spectrum.smoothing.mode=none
-visualizer.spectrum.bar=2
-
-audio.stereo.enabled=true
