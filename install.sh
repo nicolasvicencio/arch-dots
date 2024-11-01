@@ -103,7 +103,6 @@ case $hypr_res in
       break;;
 
       # Default rustup
-     rustup default stable
 esac
 done
 clear
