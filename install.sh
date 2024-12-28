@@ -64,7 +64,7 @@ case $hypr_res in
       break;;
   * ) 
       echo -e "\n Installing hyprland packages";
-    yay -S base-devel neovim kvantum lsd bat noto-fonts-emoji python-pip ripgrep  lazygit npm pnpm zsh github-cli  p7zip btop  ttf-jetbrains-mono-nerd cava-git  wl-clipboard  ttf-font-awesome ttf-iosevka-nerd ttf-material-design-icons-extended waybar hyprland rofi-wayland dunst kitty gammastep swaybg swaylock-effects swayidle pamixer light brillo wlogout qt5ct slurp swappy grim swww noto-fonts noto-fonts-cjk noto-fonts-tc dobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts pavucontrol brightnessctl nwg-look ark ranger python-pillow wl-clipboard vlc wget man neofetch sddm qt5-quickcontrols2 qt5-graphicaleffects apple-fonts kvantum-qt5 qt6ct gamemode qt5-wayland polkit imagewriter archlinux-xdg-menu thunar tumbler gvfs unrar swayidle sway-audio-idle-inhibit-git rustup eog xdg-desktop-portal-hyprland
+    yay -S base-devel neovim kvantum lsd bat noto-fonts-emoji python-pip ripgrep  lazygit npm pnpm zsh github-cli  p7zip btop  ttf-jetbrains-mono-nerd cava-git  wl-clipboard  ttf-font-awesome ttf-iosevka-nerd ttf-material-design-icons-extended waybar hyprland rofi-wayland dunst kitty gammastep swaybg swaylock-effects swayidle pamixer light brillo wlogout qt5ct slurp swappy grim swww noto-fonts noto-fonts-cjk noto-fonts-tc dobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts pavucontrol brightnessctl nwg-look ark ranger python-pillow wl-clipboard vlc wget man neofetch sddm qt5-quickcontrols2 qt5-graphicaleffects apple-fonts kvantum-qt5 qt6ct gamemode qt5-wayland polkit imagewriter archlinux-xdg-menu thunar tumbler gvfs unrar swayidle sway-audio-idle-inhibit-git rustup eog xdg-desktop-portal-hyprland bluez bluez-utils blueman
 
 
     yay -S mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon libva-mesa-driver libva-utils
@@ -94,9 +94,13 @@ case $hypr_res in
       git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
       git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
+      # Enabling Bluetooth
+      sudo systemctl enable bluetooth.service
+
       # Apply Zsh config
       cp .zshrc $HOME/.zshrc
       break;;
+
 
       # Default rustup
 esac
