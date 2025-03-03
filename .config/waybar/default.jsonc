@@ -7,6 +7,7 @@
       "(.*)kitty": "   Terminal",
       "(.*) — Vivaldi": "󰈹  $1",
       "(.*)Vivaldi": "󰈹  Vivaldi",
+      "(.*)Zen Browser": "󰈹   Zen Browser",
       "(.*) — Dolphin": "󰉋  $1",
       "(.*)Spotify": "󰓇  Spotify",
       "(.*)Steam": "󰓓  Steam",
