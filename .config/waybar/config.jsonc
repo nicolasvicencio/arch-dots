@@ -22,7 +22,7 @@
     "pulseaudio",
     // "pulseaudio#microphone",
     "memory",
-    "custom/target",
+    // "custom/target",
     "network",
     "clock",
     "custom/gamma",
