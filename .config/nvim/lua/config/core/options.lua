@@ -16,7 +16,7 @@ opt.autoindent = true
 opt.smartindent = true
 
 opt.wrap = false
-
+opt.swapfile = false
 opt.ignorecase = true
 opt.smartcase = true
 

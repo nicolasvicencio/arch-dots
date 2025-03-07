@@ -121,7 +121,7 @@ case $base_res in
   * )
      rustup default stable
      echo -e "\n Installing packages..."
-     yay -S anki bitwarden discord zen-browser qbittorrent spotify spotify-adblock obsidian lib32-gamemode 
+     yay -S anki bitwarden discord zen-browser-bin qbittorrent spotify spotify-adblock obsidian lib32-gamemode 
 
      #Getting configs
      sudo cp -r etc/* /etc/

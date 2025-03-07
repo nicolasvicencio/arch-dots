@@ -49,8 +49,8 @@ keymap.set("n", "<tab>", ":tabp<CR>") --  go to previous tab
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
 
 -- nvim tree
--- keymap.set("n", "<C-.>", ":NvimTreeToggle<CR>")
--- keymap.set("n", "<leader>e", ":NvimTreeFocus<CR>")
+-- keymap.set("n", "<C-.>", ":nvimTree Toggle<CR>")
+-- keymap.set("n", "<leader>e", ":NvimTree Focus<CR>")
 
 -- neo Tree
 keymap.set("n", "<C-.>", ":Neotree toggle<CR>")
@@ -74,24 +74,24 @@ keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current c
 keymap.set("n", "<leader>tf", "<cmd>TestFile<CR>")
 keymap.set("n", "<leader>tc", "<cmd>TestNearest<CR>")
 
-local mark = require("harpoon.mark")
-local ui = require("harpoon.ui")
+-- local mark = require("harpoon.mark")
+-- local ui = require("harpoon.ui")
 
-vim.keymap.set("n", "<leader>a", mark.add_file)
-vim.keymap.set("n", "<A-e>", ui.toggle_quick_menu)
+-- vim.keymap.set("n", "<leader>a", mark.add_file)
+-- vim.keymap.set("n", "<A-e>", ui.toggle_quick_menu)
 
-vim.keymap.set("n", "<A-u>", function()
-	ui.nav_file(1)
-end)
-vim.keymap.set("n", "<A-i>", function()
-	ui.nav_file(2)
-end)
-vim.keymap.set("n", "<A-o>", function()
-	ui.nav_file(3)
-end)
-vim.keymap.set("n", "<A-p>", function()
-	ui.nav_file(4)
-end)
+-- vim.keymap.set("n", "<A-u>", function()
+-- 	ui.nav_file(1)
+-- end)
+-- vim.keymap.set("n", "<A-i>", function()
+-- 	ui.nav_file(2)
+-- end)
+-- vim.keymap.set("n", "<A-o>", function()
+-- 	ui.nav_file(3)
+-- end)
+-- vim.keymap.set("n", "<A-p>", function()
+-- 	ui.nav_file(4)
+-- end)
 
 vim.api.nvim_set_keymap("n", ":", "<cmd>FineCmdline<CR>", { noremap = true })
 keymap.set("n", "<leader>ft", ":FloatermToggle<CR>", { noremap = true })
