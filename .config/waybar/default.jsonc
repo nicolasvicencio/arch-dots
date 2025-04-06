@@ -20,8 +20,8 @@
   "custom/gamma": {
     // "format": "󰌶",
     "format": "󰌵",
-    "on-click": "exec gammastep -O 2300",
-    "on-click-right": "pkill gammastep",
+    "on-click": "exec hyprsunset -t 2300",
+    "on-click-right": "pkill hyprsunset",
   },
   // "hyprland/workspaces": {
   //   "disable-scroll": true,

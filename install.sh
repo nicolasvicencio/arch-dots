@@ -64,20 +64,20 @@ case $hypr_res in
       break;;
   * ) 
       echo -e "\n Installing hyprland packages";
-    yay -S base-devel neovim kvantum lsd bat noto-fonts-emoji python-pip ripgrep  lazygit npm pnpm zsh github-cli  p7zip btop  ttf-jetbrains-mono-nerd cava-git  wl-clipboard  ttf-font-awesome ttf-iosevka-nerd otf-san-francisco-mono waybar hyprland rofi-wayland dunst kitty gammastep swaybg  pamixer light brillo wlogout qt5ct slurp swappy grim swww noto-fonts noto-fonts-cjk noto-fonts-tc dobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts pavucontrol brightnessctl nwg-look ark ranger python-pillow wl-clipboard vlc sddm wget man neofetch sddm qt5-quickcontrols2 qt5-graphicaleffects apple-fonts kvantum-qt5 qt6ct gamemode qt5-wayland polkit imagewriter archlinux-xdg-menu thunar tumbler gvfs unrar  rustup eog xdg-desktop-portal-hyprland bluez bluez-utils blueman hyprlock hypridle gparted waybar rofi-emoji
 
+     yay -S hyprland-meta-git base-devel lsd bat brightnessctl rofi-emoji ripgrep python-pip lazygit npm pnpm zsh github-cli p7zip btop wl-clipboard waybar rofi-wayland dunst kitty pamixer light brillo wlogout slurp swappy grim swww pavucontrol nwg-look ranger vlc wget man neofetch imagewriter thunar gvfs unrar rustup eog bluez bluez-utils blueman ly waypaper
+     yay -S noto-fonts-emoji otf-san-francisco-mono ttf-iosevka-nerd ttf-jetbrains-mono-nerd ttf-font-awesome 
 
-    yay -S mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon libva-mesa-driver libva-utils
 
       # Dolphin default file manager
       sudo xdg-mime default thunar.desktop inode/directory
+
+      sudo systemctl enable ly.service
 
       #Get configs
       cp -r .config/* $HOME/.config;
       sudo cp -rf theme/.icons $HOME/;
       sudo cp -rf theme/.themes $HOME/;
-      sudo cp -rf .local/share/* $HOME/.local/share/
-      
 
       # Check and set Zsh as the default shell
       [[ "$(awk -F: -v user="$USER" '$1 == user {print $NF}' /etc/passwd) " =~ "zsh " ]] || chsh -s $(which zsh)
@@ -96,9 +96,6 @@ case $hypr_res in
 
       # Enabling Bluetooth
       sudo systemctl enable bluetooth.service
-
-      # Enabling SDDM
-      sudo systemctl enable sddm.service
 
       # Apply Zsh config
       cp .zshrc $HOME/.zshrc
@@ -121,11 +118,7 @@ case $base_res in
   * )
      rustup default stable
      echo -e "\n Installing packages..."
-     yay -S  bitwarden discord zen-browser-bin qbittorrent spotify spotify-adblock obsidian lib32-gamemode 
-
-     #Getting configs
-     sudo cp -r etc/* /etc/
-     sudo cp -rf usr/share/Anki2 /usr/share/
+     yay -S  bitwarden discord zen-browser-bin qbittorrent spotify spotify-adblock obsidian  
 
      # Retrieving hosts file
      wget https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn/hosts
