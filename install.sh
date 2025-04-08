@@ -65,14 +65,12 @@ case $hypr_res in
   * ) 
       echo -e "\n Installing hyprland packages";
 
-     yay -S hyprland-meta-git base-devel lsd bat brightnessctl rofi-emoji ripgrep python-pip lazygit npm pnpm zsh github-cli p7zip btop wl-clipboard waybar rofi-wayland dunst kitty pamixer light brillo wlogout slurp swappy grim swww pavucontrol nwg-look ranger vlc wget man neofetch imagewriter thunar gvfs unrar rustup eog bluez bluez-utils blueman ly waypaper
+     yay -S hyprland-meta-git base-devel lsd bat brightnessctl rofi-emoji ripgrep python-pip lazygit npm pnpm zsh github-cli p7zip btop wl-clipboard waybar rofi-wayland dunst kitty pamixer light brillo wlogout slurp swappy grim swww pavucontrol nwg-look ranger vlc wget man neofetch imagewriter  gvfs unrar rustup eog   waypaper
      yay -S noto-fonts-emoji otf-san-francisco-mono ttf-iosevka-nerd ttf-jetbrains-mono-nerd ttf-font-awesome 
 
 
       # Dolphin default file manager
-      sudo xdg-mime default thunar.desktop inode/directory
 
-      sudo systemctl enable ly.service
 
       #Get configs
       cp -r .config/* $HOME/.config;
@@ -95,7 +93,6 @@ case $hypr_res in
       git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
       # Enabling Bluetooth
-      sudo systemctl enable bluetooth.service
 
       # Apply Zsh config
       cp .zshrc $HOME/.zshrc

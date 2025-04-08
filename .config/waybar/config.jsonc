@@ -8,7 +8,7 @@
   "gtk-layer-shell": true,
   "padding-left": 10,
   "padding-right": 10,
-  "height": 20,
+  "height": 30,
   "modules-left": [
     "custom/power-menu",
     "hyprland/workspaces",
