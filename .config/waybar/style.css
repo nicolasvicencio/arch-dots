@@ -25,7 +25,7 @@
   /* font-family: "JetBrainsMono Nerd Font"; */
   font-family: "San Francisco";
   font-weight: bold;
-  font-size: 11px;
+  font-size: 12px;
   min-height: 0;
 }
 
@@ -42,6 +42,14 @@ window#waybar.empty #window {
   padding: 0;
   margin: 0;
   border: none;
+}
+
+.timer {
+  color: @bar-bg;
+  background-color: #a6adc8;
+  margin: 0 10px;
+  padding: 0 10px;
+  border-radius: 4px;
 }
 
 tooltip {

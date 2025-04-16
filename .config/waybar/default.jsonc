@@ -17,6 +17,22 @@
     },
     "max-length": 1000,
   },
+"custom/timer": {
+    "exec": "/home/nicodev/.config/waybar/scripts/waybar_timer hook",
+    "exec-on-event": false,
+    "return-type": "json",
+    "format": "{icon} {0}",
+    "format-icons": {
+        "standby": "STANDBY",
+        "running": "RUNNING",
+        "paused": "PAUSE"
+    },
+    "on-click": "/home/nicodev/.config/waybar/scripts/waybar_timer  new 25 'notify-send \"Session finished\"'",
+    "on-click-middle": "/home/nicodev/.config/waybar/scripts/waybar_timer cancel",
+    "on-click-right": "/home/nicodev/.config/waybar/scripts/waybar_timer togglepause",
+    "on-scroll-up": "/home/nicodev/.config/waybar/scripts/waybar_time increase 60 || /home/nicodev/.config/waybar/scripts/waybar-timer-0.3/src/main.rs new 1 'notify-send -u critical \"Timer expired\"'",
+    "on-scroll-down": "/home/nicodev/.config/waybar/scripts/waybar_timer decrease 60"
+},
   "custom/gamma": {
     // "format": "󰌶",
     "format": "󰌵",
@@ -44,13 +60,6 @@
     "format": "{name}",
     "all-outputs": false,
     "active-only": false,
-    "persistent_workspaces": {
-      "DP-1": [1, 2, 3, 4],
-      // "HDMI-A-1": [5],
-    },
-    "persistent-workspaces": {
-      "*": [ 1,2,3,4 ]
-    },
     "on-click": "activate",
     "format-icons": {
       "1": " ",
