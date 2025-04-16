@@ -94,6 +94,7 @@ case $hypr_res in
 
       # Enabling Bluetooth
 
+      cp -rf .local/share/bin ~/.local/share
       # Apply Zsh config
       cp .zshrc $HOME/.zshrc
       break;;
