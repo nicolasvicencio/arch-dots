@@ -65,7 +65,7 @@ case $hypr_res in
   * ) 
       echo -e "\n Installing hyprland packages";
 
-     yay -S hyprland-meta-git base-devel lsd bat brightnessctl rofi-emoji ripgrep python-pip lazygit npm pnpm zsh github-cli p7zip btop wl-clipboard waybar rofi-wayland dunst kitty pamixer light brillo wlogout slurp swappy grim swww pavucontrol nwg-look ranger vlc wget man neofetch imagewriter  gvfs unrar rustup eog   waypaper
+     yay -S hyprland-meta-git base-devel lsd bat brightnessctl rofi-emoji ripgrep python-pip lazygit npm pnpm zsh github-cli p7zip btop wl-clipboard waybar rofi-wayland dunst kitty pamixer light brillo wlogout slurp swappy grim swww pavucontrol nwg-look ranger vlc wget man neofetch imagewriter  gvfs unrar rustup eog waypaper
      yay -S noto-fonts-emoji otf-san-francisco-mono ttf-iosevka-nerd ttf-jetbrains-mono-nerd ttf-font-awesome 
 
 
@@ -116,7 +116,7 @@ case $base_res in
   * )
      rustup default stable
      echo -e "\n Installing packages..."
-     yay -S  bitwarden discord zen-browser-bin qbittorrent spotify spotify-adblock obsidian  
+     yay -S  bitwarden discord zen-browser-bin qbittorrent spotify spotify-adblock obsidian audacity
 
      # Retrieving hosts file
      wget https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn/hosts
