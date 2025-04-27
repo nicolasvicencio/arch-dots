@@ -116,7 +116,7 @@ case $base_res in
   * )
      rustup default stable
      echo -e "\n Installing packages..."
-     yay -S  bitwarden discord zen-browser-bin qbittorrent spotify spotify-adblock obsidian audacity
+     yay -S  bitwarden discord zen-browser-bin qbittorrent spotify spotify-adblock obsidian audacity zathura zathura-pdf-mupdf 
 
      # Retrieving hosts file
      wget https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn/hosts
