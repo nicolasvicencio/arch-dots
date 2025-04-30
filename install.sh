@@ -76,6 +76,7 @@ case $hypr_res in
       cp -r .config/* $HOME/.config;
       sudo cp -rf theme/.icons $HOME/;
       sudo cp -rf theme/.themes $HOME/;
+      sudo cp -rf .local/share/bin ~/.local/share/
 
       # Check and set Zsh as the default shell
       [[ "$(awk -F: -v user="$USER" '$1 == user {print $NF}' /etc/passwd) " =~ "zsh " ]] || chsh -s $(which zsh)
