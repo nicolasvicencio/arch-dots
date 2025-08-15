@@ -34,7 +34,7 @@
     "on-scroll-down": "/home/nicodev/.config/waybar/scripts/waybar_timer decrease 60"
 },
   "custom/gamma": {
-    // "format": "󰌶",
+    // "format-alt": "󰌶",
     "format": "󰌵",
     "on-click": "exec hyprsunset -t 2300",
     "on-click-right": "pkill hyprsunset",
@@ -56,19 +56,45 @@
   //     "4": "4"
   //   }
   // },
-  "hyprland/workspaces": {
-    "format": "{name}",
-    "all-outputs": false,
-    "active-only": false,
-    "on-click": "activate",
+  // "hyprland/workspaces": {
+  //   "format": "",
+  //   "all-outputs": false,
+  //   "active-only": false,
+  //   "on-click": "activate",
+  //   "persistent-workspaces": {
+  //     "1": " ",
+  //     "2": " ",
+  //     "3": " ",
+  //     "4": " "
+  //   },
+  //   "format-icons": {
+  //     "1": "",
+  //     "2": "",
+  //     "3": "",
+  //     "4": "",
+  //     "active": " ",
+  //   },
+  // },
+ "hyprland/workspaces": {
+        "on-click": "activate",
+        "format": "{icon}",
+        "all-outputs": true,
+        "disable-scroll": false,
+        "active-only": false,
+        "persistent-workspaces": {
+          "1": " ",
+          "2": " ",
+          "3": " ",
+          "4": " "
+        },
     "format-icons": {
-      "1": " ",
-      "2": " ",
-      "3": " ",
-      "4": " ",
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
       "active": " ",
     },
-  },
+ },
   "custom/power_profile": {
     //shows the current power profile and switches to next on click
     "exec": "asusctl profile -p | sed s:'Active profile is'::",
@@ -97,29 +123,45 @@
     "icon-size": 14,
     "spacing": 10,
   },
-  "clock": {
-    "format": "  {:%I:%M %p}",
-    "format-alt": "  {:%R 󰃭  %y·%m·%d}",
-    "tooltip-format": "<tt>{calendar}</tt>",
-    "calendar": {
-      "mode": "month",
-      "mode-mon-col": 3,
-      "on-scroll": 1,
-      "on-click-right": "mode",
-      "format": {
-        "months": "<span color='#ffead3'><b>{}</b></span>",
-        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-        "today": "<span color='#ff6699'><b>{}</b></span>",
-      },
+  // "clock": {
+  //   "format": "  {:%I:%M %p}",
+  //   "format-alt": "  {:%R 󰃭  %y·%m·%d}",
+  //   "tooltip-format": "<tt>{calendar}</tt>",
+  //   "calendar": {
+  //     "mode": "month",
+  //     "mode-mon-col": 3,
+  //     "on-scroll": 1,
+  //     "on-click-right": "mode",
+  //     "format": {
+  //       "months": "<span color='#ffead3'><b>{}</b></span>",
+  //       "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+  //       "today": "<span color='#ff6699'><b>{}</b></span>",
+  //     },
+  //   },
+  //   "actions": {
+  //     "on-click-right": "mode",
+  //     "on-click-forward": "tz_up",
+  //     "on-click-backward": "tz_down",
+  //     "on-scroll-up": "shift_up",
+  //     "on-scroll-down": "shift_down",
+  //   },
+  // },
+ "clock": {
+        "format": "{:%b %d, %I:%M %p}",
+        "calendar": {
+            "format": {
+                "days": "<span weight='normal'>{}</span>",
+                "months": "<span color='#cdd6f4'><b>{}</b></span>",
+                "today": "<span color='#f38ba8' weight='700'><u>{}</u></span>",
+                "weekdays": "<span color='#f9e2af'><b>{}</b></span>",
+                "weeks": "<span color='#a6e3a1'><b>W{}</b></span>",
+            },
+            "mode": "month",
+            "mode-mon-col": 1,
+            "on-scroll": 1,
+        },
+        "tooltip-format": "<span color='#cdd6f4' font='Lexend 16'><tt><small>{calendar}</small></tt></span>",
     },
-    "actions": {
-      "on-click-right": "mode",
-      "on-click-forward": "tz_up",
-      "on-click-backward": "tz_down",
-      "on-scroll-up": "shift_up",
-      "on-scroll-down": "shift_down",
-    },
-  },
   "backlight": {
     "device": "intel_backlight",
     "format": "{icon} {percent}%",
@@ -173,14 +215,14 @@
   },
 
   "temperature": {
-    "thermal-zone": 1,
+    "thermal-zone": 2,
     "format": "{temperatureF}°F ",
     "critical-threshold": 80,
     "format-critical": "{temperatureC}°C ",
   },
   "cpu": {
     "interval": 10,
-    "format": "󰍛 {usage}%",
+    "format": "  {usage}%",
     "format-alt": "{icon0}{icon1}{icon2}{icon3}",
     "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
   },
@@ -203,10 +245,16 @@
     "format-disconnected": "Disconnected   ",
     "format-alt": "󰀂   {ipaddr}/{cidr}",
   },
+  // "memory": {
+  //   "interval": 30,
+  //   "format": "  {}%",
+  //   "format-alt": "  {used:0.1f}GB",
+  //   "max-length": 10,
+  // },
   "memory": {
     "interval": 30,
-    "format": "  {}%",
-    "format-alt": "  {used:0.1f}GB",
+    "format": "󰥔  {}%",
+    "format-alt": "󰥔  {used:0.1f}GB",
     "max-length": 10,
   },
   "bluetooth": {

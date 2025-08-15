@@ -9,7 +9,7 @@
 /* @define-color wb-hvr-bg #93cee9; */
 /* @define-color wb-hvr-fg #1f2328; */
 
-@define-color bar-bg rgba(0, 0, 0, 0.6);
+@define-color bar-bg rgba(0, 0, 0, 1);
 
 @define-color main-bg #11111b;
 @define-color main-fg #cdd6f4;
@@ -69,8 +69,8 @@ tooltip {
   padding-left: 3px;
   padding-right: 3px;
   color: @main-fg;
-  animation: gradient_f 20s ease-in infinite;
-  transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+  /* animation: gradient_f 20s ease-in infinite; */
+  /* transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682); */
 }
 
 #workspaces button.active {
@@ -80,8 +80,8 @@ tooltip {
   padding-left: 12px;
   padding-right: 12px;
   margin-right: 3px;
-  animation: gradient_f 20s ease-in infinite;
-  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+  /* animation: gradient_f 20s ease-in infinite; */
+  /* transition: all 0.1s cubic-bezier(0.55, -0.68, 0.48, 1.682); */
 }
 
 #workspaces button:hover {
@@ -89,8 +89,8 @@ tooltip {
   color: @wb-hvr-fg;
   padding-left: 3px;
   padding-right: 3px;
-  animation: gradient_f 20s ease-in infinite;
-  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+  /* animation: gradient_f 20s ease-in infinite; */
+  /* transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682); */
 }
 
 #custom-power-menu,
