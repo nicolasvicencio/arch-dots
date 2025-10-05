@@ -65,7 +65,7 @@ case $hypr_res in
   * ) 
       echo -e "\n Installing hyprland packages";
 
-     yay -S hypridle-git hyprland-git hyprlock-git hyprpaper-git hyprpicker-git hyprpolkitagent-git hyprpwcenter-git hyprqt6engine-git hyprsunset-git hyprsysteminfo-git xdg-desktop-portal-hyprland-git neovim hyprland-meta-git vicinae-bin base-devel lsd bat brightnessctl rofi-emoji ripgrep python-pip lazygit npm pnpm zsh github-cli p7zip btop wl-clipboard waybar rofi-wayland dunst kitty pamixer light brillo wlogout slurp swappy grim swww pavucontrol nwg-look ranger vlc wget man neofetch imagewriter  gvfs unrar rustup eog waypaper polkit-gnome nemo  xdg-desktop-portal-gtk
+     yay -S hypridle-git hyprland-git hyprlock-git hyprpaper-git hyprpicker-git hyprpolkitagent-git hyprpwcenter-git hyprqt6engine-git hyprsunset-git hyprsysteminfo-git xdg-desktop-portal-hyprland-git neovim  vicinae-bin base-devel lsd bat brightnessctl rofi-emoji ripgrep python-pip lazygit npm pnpm zsh github-cli p7zip btop wl-clipboard waybar rofi-wayland dunst kitty pamixer light brillo wlogout slurp swappy grim swww pavucontrol nwg-look ranger vlc wget man neofetch imagewriter  gvfs unrar rustup eog waypaper polkit-gnome nemo  xdg-desktop-portal-gtk
      yay -S noto-fonts-emoji otf-san-francisco-mono ttf-iosevka-nerd ttf-jetbrains-mono-nerd ttf-font-awesome 
 
 
