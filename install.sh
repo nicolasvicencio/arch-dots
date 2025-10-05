@@ -65,12 +65,8 @@ case $hypr_res in
   * ) 
       echo -e "\n Installing hyprland packages";
 
-     yay -S hypridle-git hyprland-git hyprlock-git hyprpaper-git hyprpicker-git hyprpolkitagent-git hyprpwcenter-git hyprqt6engine-git hyprsunset-git hyprsysteminfo-git xdg-desktop-portal-hyprland-git neovim  vicinae-bin base-devel lsd bat brightnessctl rofi-emoji ripgrep python-pip lazygit npm pnpm zsh github-cli p7zip btop wl-clipboard waybar rofi-wayland dunst kitty pamixer light brillo wlogout slurp swappy grim swww pavucontrol nwg-look ranger vlc wget man neofetch imagewriter  gvfs unrar rustup eog waypaper polkit-gnome nemo  xdg-desktop-portal-gtk
+     yay -S hypridle-git hyprland-git hyprlock-git hyprpaper-git hyprpicker-git hyprpolkitagent-git hyprpwcenter-git hyprqt6engine-git hyprsunset-git hyprsysteminfo-git xdg-desktop-portal-hyprland-git neovim  vicinae-bin base-devel lsd bat brightnessctl rofi-emoji ripgrep python-pip lazygit npm pnpm zsh github-cli p7zip btop wl-clipboard waybar rofi-wayland dunst kitty pamixer light brillo wlogout slurp swappy grim swww pavucontrol nwg-look ranger vlc wget man neofetch imagewriter  gvfs unrar rustup eog waypaper polkit-gnome nemo  xdg-desktop-portal-gtk flatpak flathub noctalia-shell
      yay -S noto-fonts-emoji otf-san-francisco-mono ttf-iosevka-nerd ttf-jetbrains-mono-nerd ttf-font-awesome 
-
-
-      systemctl enable --now --user vicinae.service
-      # Dolphin default file manager
 
 
       #Get configs
@@ -118,7 +114,7 @@ case $base_res in
   * )
      rustup default stable
      echo -e "\n Installing packages..."
-     yay -S  bitwarden discord zen-browser-bin qbittorrent spotify spotify-adblock obsidian audacity zathura zathura-pdf-mupdf
+     yay -S  bitwarden discord zen-browser-bin qbittorrent spotify spotify-adblock youtube-music obsidian audacity zathura zathura-pdf-mupdf
 
      # Retrieving hosts file
      wget https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn/hosts
