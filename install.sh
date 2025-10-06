@@ -65,7 +65,7 @@ case $hypr_res in
   * ) 
       echo -e "\n Installing hyprland packages";
 
-     yay -S hypridle-git hyprland-git hyprlock-git hyprpaper-git hyprpicker-git hyprpolkitagent-git hyprpwcenter-git hyprqt6engine-git hyprsunset-git hyprsysteminfo-git xdg-desktop-portal-hyprland-git neovim  vicinae-bin base-devel lsd bat brightnessctl rofi-emoji ripgrep python-pip lazygit npm pnpm zsh github-cli p7zip btop wl-clipboard waybar rofi-wayland dunst kitty pamixer light brillo wlogout slurp swappy grim swww pavucontrol nwg-look ranger vlc wget man neofetch imagewriter  gvfs unrar rustup eog waypaper polkit-gnome nemo  xdg-desktop-portal-gtk flatpak flathub noctalia-shell
+     yay -S hypridle hyprland hyprlock cava wlsunset bluez bluez-utils hyprpaper hyprpicker hyprpolkitagent hyprpwcenter hyprqt6engine hyprsunset hyprsysteminfo xdg-desktop-portal-hyprland neovim  vicinae-bin base-devel lsd bat brightnessctl rofi-emoji ripgrep python-pip lazygit npm pnpm zsh github-cli p7zip btop wl-clipboard waybar rofi-wayland dunst kitty pamixer light brillo wlogout slurp swappy grim swww pavucontrol nwg-look ranger vlc wget man neofetch imagewriter  gvfs unrar rustup eog waypaper polkit-gnome nemo  xdg-desktop-portal-gtk flatpak bazaar noctalia-shell polkit ly
      yay -S noto-fonts-emoji otf-san-francisco-mono ttf-iosevka-nerd ttf-jetbrains-mono-nerd ttf-font-awesome 
 
 
@@ -91,6 +91,8 @@ case $hypr_res in
       git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
       # Enabling Bluetooth
+      sudo systemctl enable bluez.service
+      sudo systemctl enable ly.service
 
       cp -rf .local/share/bin ~/.local/share
       # Apply Zsh config
@@ -121,6 +123,8 @@ case $base_res in
      wait
      sudo mv hosts /etc/hosts
 
+     git config --global user.name 'Nicolas Vicencio'
+     git config --global user.email 'nicolas.vicencio.or@gmail.com'
      break;;
 esac
 done
