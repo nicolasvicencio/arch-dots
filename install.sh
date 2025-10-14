@@ -106,7 +106,7 @@ done
 clear
 
 while true; do 
-read -p "Install niri configs? (Y/n) " -n 1 hypr_res
+read -p "Install Niri configs? (Y/n) " -n 1 hypr_res
 
 case $hypr_res in
   [nN] )
@@ -115,7 +115,7 @@ case $hypr_res in
   * ) 
       echo -e "\n Installing niri packages";
 
-     yay -S niri xdg-desktop-portal-gtk xdg-desktop-portal-gnome xdg-desktop-portal xwayland-satellite udiskie noctalia-shell cliphist matugen-git cava wlsunset ddcutil vicinae vivaldi fastfetch zsh bat lsd python-pip npm pnpm github-cli p7zip btop man vlc kitty imagewriter onlyoffice-bin rustup eog polkit-gnome krita flatpak bazaar zed qbittorrent spotify spotify-adblock obsidian audacity zathura zathura-pdf-mupdf android-studio-bin bluez bluez-utils sane hplip hplip-plugin mesa gnome-text-editor gdm nautilus simple-scan
+     yay -S niri xdg-desktop-portal-gtk xdg-desktop-portal-gnome xdg-desktop-portal xwayland-satellite udiskie noctalia-shell cliphist matugen-git cava wlsunset ddcutil vicinae vivaldi fastfetch zsh bat lsd python-pip npm pnpm github-cli p7zip btop man vlc kitty imagewriter onlyoffice-bin rustup eog polkit-gnome krita flatpak bazaar zed qbittorrent spotify spotify-adblock obsidian audacity zathura zathura-pdf-mupdf android-studio-bin bluez bluez-utils sane hplip hplip-plugin mesa gnome-text-editor gdm nautilus simple-scan hyprpicker lazygit
      yay -S noto-fonts-emoji otf-san-francisco-mono ttf-iosevka-nerd ttf-jetbrains-mono-nerd ttf-font-awesome 
 
 
@@ -153,8 +153,8 @@ case $hypr_res in
      wait
      sudo mv hosts /etc/hosts
 
-     git config --global user.name 'Nicolas Vicencio'
-     git config --global user.email 'nicolas.vicencio.or@gmail.com'
+     git config --global user.name "Nicolas Vicencio"
+     git config --global user.email "nicolas.vicencio.or@gmail.com"
     break;;
 
 

@@ -28,6 +28,18 @@ export CLICOLOR=1
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
+HISTSIZE=5000
+HISTFILE=~/.zsh_history
+SAVEHIST=$HISTSIZE
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
+
 function settarget(){
 	if [ $# -eq 1 ]; then
 	echo $1 > ~/.config/waybar/target
@@ -61,4 +73,4 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-[[ $(tty) == /dev/tty1 ]]&&exec Hyprland
+# [[ $(tty) == /dev/tty1 ]]&&exec Hyprland
