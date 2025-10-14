@@ -105,6 +105,63 @@ esac
 done
 clear
 
+while true; do 
+read -p "Install niri configs? (Y/n) " -n 1 hypr_res
+
+case $hypr_res in
+  [nN] )
+      echo ""
+      break;;
+  * ) 
+      echo -e "\n Installing niri packages";
+
+     yay -S niri xdg-desktop-portal-gtk xdg-desktop-portal-gnome xdg-desktop-portal xwayland-stellite udiskie noctalia-shell cliphist matugen-git cava wlsunset ddcutil vicinae vivaldi fastfetch zsh bat lsd python-pip npm pnpm github-cli p7zip btop man vlckitty imagewriter only-office rustup eog polkit-gnome krita flatpak bazaar zed qbittorrent spotify spotify-adblock youtube-music obsidian audacity zathura zathura-pdf-mupdf android-studio
+     yay -S noto-fonts-emoji otf-san-francisco-mono ttf-iosevka-nerd ttf-jetbrains-mono-nerd ttf-font-awesome 
+
+
+      #Get configs
+      cp -r niri/.config/* $HOME/.config;
+      sudo cp -rf theme/.icons/* /ush/share/themes;
+      sudo cp -rf theme/.themes/* /usr/share/icons;
+
+      # Check and set Zsh as the default shell
+      [[ "$(awk -F: -v user="$USER" '$1 == user {print $NF}' /etc/passwd) " =~ "zsh " ]] || chsh -s $(which zsh)
+
+      # Install Oh My Zsh
+      if [ ! -d ~/.oh-my-zsh/ ]; then
+        sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended 
+      else
+        omz update
+      fi
+
+      # Install Zsh plugins
+      git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+      git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+      git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+      # Enabling Bluetooth
+      sudo systemctl enable bluetooth.service
+      sudo systemctl enable gdm.service
+
+      cp -rf .local/share/bin ~/.local/share
+      # Apply Zsh config
+      cp .zshrc $HOME/.zshrc
+
+     # Retrieving hosts file
+     wget https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn/hosts
+     wait
+     sudo mv hosts /etc/hosts
+
+     git config --global user.name 'Nicolas Vicencio'
+     git config --global user.email 'nicolas.vicencio.or@gmail.com'
+    break;;
+
+
+      # Default rustup
+esac
+done
+clear
+
 #Installing personal packages
 while true; do 
 read -p 'Install Personal packages? (Y/n)' -n 1 base_res
