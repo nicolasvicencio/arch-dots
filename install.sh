@@ -115,7 +115,7 @@ case $hypr_res in
   * ) 
       echo -e "\n Installing niri packages";
 
-     yay -S niri xdg-desktop-portal-gtk xdg-desktop-portal-gnome xdg-desktop-portal xwayland-stellite udiskie noctalia-shell cliphist matugen-git cava wlsunset ddcutil vicinae vivaldi fastfetch zsh bat lsd python-pip npm pnpm github-cli p7zip btop man vlckitty imagewriter only-office rustup eog polkit-gnome krita flatpak bazaar zed qbittorrent spotify spotify-adblock youtube-music obsidian audacity zathura zathura-pdf-mupdf android-studio
+     yay -S niri xdg-desktop-portal-gtk xdg-desktop-portal-gnome xdg-desktop-portal xwayland-satellite udiskie noctalia-shell cliphist matugen-git cava wlsunset ddcutil vicinae vivaldi fastfetch zsh bat lsd python-pip npm pnpm github-cli p7zip btop man vlc kitty imagewriter onlyoffice-bin rustup eog polkit-gnome krita flatpak bazaar zed qbittorrent spotify spotify-adblock obsidian audacity zathura zathura-pdf-mupdf android-studio-bin bluez bluez-utils sane hplip hplip-plugin mesa gnome-text-editor gdm nautilus simple-scan
      yay -S noto-fonts-emoji otf-san-francisco-mono ttf-iosevka-nerd ttf-jetbrains-mono-nerd ttf-font-awesome 
 
 
@@ -123,6 +123,7 @@ case $hypr_res in
       cp -r niri/.config/* $HOME/.config;
       sudo cp -rf theme/.icons/* /ush/share/themes;
       sudo cp -rf theme/.themes/* /usr/share/icons;
+      gsettings set org.gnome.desktop.interface font-name 'Sans 9'
 
       # Check and set Zsh as the default shell
       [[ "$(awk -F: -v user="$USER" '$1 == user {print $NF}' /etc/passwd) " =~ "zsh " ]] || chsh -s $(which zsh)
@@ -162,30 +163,6 @@ esac
 done
 clear
 
-#Installing personal packages
-while true; do 
-read -p 'Install Personal packages? (Y/n)' -n 1 base_res
-
-case $base_res in 
-  [nN] )
-     echo ""
-     break;;
-  * )
-     rustup default stable
-     echo -e "\n Installing packages..."
-     yay -S  bitwarden discord zen-browser-bin qbittorrent spotify spotify-adblock youtube-music obsidian audacity zathura zathura-pdf-mupdf
-
-     # Retrieving hosts file
-     wget https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn/hosts
-     wait
-     sudo mv hosts /etc/hosts
-
-     git config --global user.name 'Nicolas Vicencio'
-     git config --global user.email 'nicolas.vicencio.or@gmail.com'
-     break;;
-esac
-done
-clear
 
 while true; do 
 read -p 'Install Pentesting tools? (Y/n)' -n 1 hack_res
