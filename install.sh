@@ -65,7 +65,7 @@ case $hypr_res in
   * ) 
       echo -e "\n Installing hyprland packages";
 
-     yay -S hypridle hyprland hyprlock cava wlsunset bluez bluez-utils hyprpaper hyprpicker hyprpolkitagent hyprpwcenter hyprqt6engine hyprsunset hyprsysteminfo xdg-desktop-portal-hyprland neovim  vicinae-bin base-devel lsd bat brightnessctl rofi-emoji ripgrep python-pip lazygit npm pnpm zsh github-cli p7zip btop wl-clipboard waybar rofi-wayland dunst kitty pamixer light brillo wlogout slurp swappy grim swww pavucontrol nwg-look ranger vlc wget man neofetch imagewriter  gvfs unrar rustup eog waypaper polkit-gnome nemo  xdg-desktop-portal-gtk flatpak bazaar noctalia-shell polkit ly
+     yay -S hypridle hyprland hyprlock cava wlsunset bluez bluez-utils hyprpaper hyprpicker hyprpolkitagent hyprpwcenter hyprqt6engine hyprsunset hyprsysteminfo xdg-desktop-portal-hyprland neovim  vicinae-bin base-devel lsd bat brightnessctl rofi-emoji ripgrep python-pip lazygit npm pnpm zsh github-cli p7zip btop wl-clipboard waybar rofi-wayland dunst kitty pamixer light brillo wlogout slurp swappy grim swww pavucontrol nwg-look ranger vlc wget man neofetch imagewriter  gvfs unrar rustup eog waypaper polkit-gnome nemo  xdg-desktop-portal-gtk flatpak bazaar noctalia-shell polkit ly dysk
      yay -S noto-fonts-emoji otf-san-francisco-mono ttf-iosevka-nerd ttf-jetbrains-mono-nerd ttf-font-awesome 
 
 
@@ -115,7 +115,7 @@ case $hypr_res in
   * ) 
       echo -e "\n Installing niri packages";
 
-     yay -S niri xdg-desktop-portal-gtk xdg-desktop-portal-gnome xdg-desktop-portal xwayland-satellite udiskie noctalia-shell cliphist matugen-git cava wlsunset ddcutil vicinae vivaldi fastfetch zsh bat lsd python-pip npm pnpm github-cli p7zip btop man vlc kitty imagewriter onlyoffice-bin rustup eog polkit-gnome krita flatpak bazaar zed qbittorrent spotify spotify-adblock obsidian audacity zathura zathura-pdf-mupdf android-studio-bin bluez bluez-utils sane hplip hplip-plugin mesa gnome-text-editor gdm nautilus simple-scan hyprpicker lazygit
+     yay -S niri xdg-desktop-portal-gtk xdg-desktop-portal-gnome xdg-desktop-portal xwayland-satellite udiskie noctalia-shell cliphist matugen-git cava wlsunset ddcutil vicinae vivaldi fastfetch zsh bat lsd python-pip npm pnpm github-cli p7zip btop man vlc kitty imagewriter onlyoffice-bin rustup eog polkit-gnome krita flatpak bazaar zed qbittorrent spotify spotify-adblock obsidian audacity zathura zathura-pdf-mupdf android-studio-bin bluez bluez-utils sane hplip hplip-plugin mesa gnome-text-editor ly nautilus simple-scan hyprpicker lazygit dysk
      yay -S noto-fonts-emoji otf-san-francisco-mono ttf-iosevka-nerd ttf-jetbrains-mono-nerd ttf-font-awesome 
 
 
@@ -142,7 +142,7 @@ case $hypr_res in
 
       # Enabling Bluetooth
       sudo systemctl enable bluetooth.service
-      sudo systemctl enable gdm.service
+      sudo systemctl enable ly.service
 
       cp -rf .local/share/bin ~/.local/share
       # Apply Zsh config

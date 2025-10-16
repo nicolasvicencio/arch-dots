@@ -65,11 +65,11 @@ input {
 }
 
 
-/-output "DP-1" {
+output "DP-1" {
     // off
 
     // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
-    mode "2560x1440@164.999"
+    mode "2560x1440@179.999"
     scale 1
     transform "normal"
     position x=1280 y=0
@@ -77,9 +77,9 @@ input {
 
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 15
+    gaps 10
 
-    center-focused-column "never"
+    center-focused-column "always"
     preset-column-widths {
         // Proportion sets the width as a fraction of the output width, taking gaps into account.
         // For example, you can perfectly fit four windows sized "proportion 0.25" on an output.
@@ -115,7 +115,7 @@ layout {
 
     shadow {
         // Uncomment the next line to enable shadows.
-        on
+        // on
 
         softness 10
         spread 5
@@ -134,7 +134,8 @@ layout {
 
 spawn-sh-at-startup "vicinae server"
 spawn-sh-at-startup "qs -c noctalia-shell"
-spawn-sh-at-startup "wlr-randr --output DP-1 --mode 2560x1440@179.998993"
+// spawn-sh-at-startup "niri msg output DP-1 mode 2560x1440@179.999"
+// spawn-sh-at-startup "wlr-randr --output DP-1 --mode 2560x1440@179.998993"
 spawn-at-startup "xdg-desktop-portal-gtk"
 spawn-at-startup "xdg-desktop-portal-gnome"
 spawn-at-startup "gnome-keyring"
