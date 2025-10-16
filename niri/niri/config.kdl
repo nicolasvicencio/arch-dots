@@ -134,8 +134,7 @@ layout {
 
 spawn-sh-at-startup "vicinae server"
 spawn-sh-at-startup "qs -c noctalia-shell"
-// spawn-sh-at-startup "niri msg output DP-1 mode 2560x1440@179.999"
-// spawn-sh-at-startup "wlr-randr --output DP-1 --mode 2560x1440@179.998993"
+spawn-sh-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 "
 spawn-at-startup "xdg-desktop-portal-gtk"
 spawn-at-startup "xdg-desktop-portal-gnome"
 spawn-at-startup "gnome-keyring"
