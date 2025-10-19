@@ -79,7 +79,7 @@ layout {
     // Set gaps around windows in logical pixels.
     gaps 10
 
-    center-focused-column "always"
+    center-focused-column "never"
     preset-column-widths {
         // Proportion sets the width as a fraction of the output width, taking gaps into account.
         // For example, you can perfectly fit four windows sized "proportion 0.25" on an output.
@@ -202,6 +202,12 @@ window-rule {
 window-rule {
     geometry-corner-radius 20
     clip-to-geometry true
+}
+window-rule {
+    match title="Vivaldi"
+    default-column-width { proportion 0.9; }
+    open-focused true
+
 }
 
 layer-rule {
