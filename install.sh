@@ -121,8 +121,8 @@ case $hypr_res in
 
       #Get configs
       cp -r niri/* $HOME/.config;
-      sudo cp -rf theme/.icons/* /ush/share/themes;
-      sudo cp -rf theme/.themes/* /usr/share/icons;
+      sudo cp -rf theme/.icons/* /ush/share/icons;
+      sudo cp -rf theme/.themes/* /usr/share/themes;
       gsettings set org.gnome.desktop.interface font-name 'Sans 9'
 
       # Check and set Zsh as the default shell
