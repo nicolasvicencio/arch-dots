@@ -121,7 +121,7 @@ case $hypr_res in
 
       #Get configs
       cp -r niri/* $HOME/.config;
-      sudo cp -rf theme/.icons/* /ush/share/icons;
+      sudo cp -rf theme/.icons/* /usr/share/icons;
       sudo cp -rf theme/.themes/* /usr/share/themes;
       gsettings set org.gnome.desktop.interface font-name 'Sans 9'
 
