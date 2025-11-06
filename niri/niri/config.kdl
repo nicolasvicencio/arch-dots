@@ -65,7 +65,7 @@ input {
 }
 
 
-output "DP-1" {
+/-output "DP-1" {
     // off
 
     // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
@@ -78,13 +78,16 @@ output "DP-1" {
 layout {
     // Set gaps around windows in logical pixels.
     gaps 10
+    
+    always-center-single-column
+
 
     center-focused-column "never"
     preset-column-widths {
         // Proportion sets the width as a fraction of the output width, taking gaps into account.
         // For example, you can perfectly fit four windows sized "proportion 0.25" on an output.
         // The default preset widths are 1/3, 1/2 and 2/3 of the output.
-        proportion 0.9
+        proportion 0.95
         proportion 0.5
         proportion 0.33333
     }
@@ -134,7 +137,9 @@ layout {
 
 spawn-sh-at-startup "vicinae server"
 spawn-sh-at-startup "qs -c noctalia-shell"
-spawn-sh-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 "
+spawn-sh-at-startup "niri msg output DP-1 mode 2560x1440@179.999" 
+spawn-sh-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+spawn-at-startup "hypridle"
 spawn-at-startup "xdg-desktop-portal-gtk"
 spawn-at-startup "xdg-desktop-portal-gnome"
 spawn-at-startup "gnome-keyring"
@@ -163,6 +168,19 @@ animations {
     // slowdown 3.0
 }
 
+window-rule {
+    match app-id=r#"vivaldi-stable$"#
+    match app-id=r#"zed$"#
+    
+    default-column-width {proportion 0.95;}
+}
+
+window-rule {
+    match app-id=r#"krita$"#
+    open-maximized  true;
+    
+}
+
 
 window-rule {
     // This regular expression is intentionally made as specific as possible,
@@ -177,8 +195,13 @@ window-rule {
     // This app-id regular expression will work for both:
     // - host Firefox (app-id is "firefox")
     // - Flatpak Firefox (app-id is "org.mozilla.firefox")
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    match title="^Picture in picture$"
+    match title="Vivaldi Settings: General - Vivaldi"
+    match title="Sign in - Google Accounts - Vivaldi"
+    match app-id="org.gnome.eog"
     open-floating true
+
+
 }
 
 // Example: block out two password managers from screen capture.
@@ -202,12 +225,6 @@ window-rule {
 window-rule {
     geometry-corner-radius 20
     clip-to-geometry true
-}
-window-rule {
-    match title="Vivaldi"
-    default-column-width { proportion 0.9; }
-    open-focused true
-
 }
 
 layer-rule {
@@ -243,7 +260,8 @@ binds {
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
     // For example, this is a standard bind to toggle the screen reader (orca).
     Mod+D allow-when-locked=true hotkey-overlay-title=null { spawn-sh "vicinae toggle"; }
-    Mod+P allow-when-locked=true hotkey-overlay-title=null { spawn-sh "sh /home/nicodev/.config/niri/scripts/hyprPicker.sh"; }
+    // Mod+D allow-when-locked=true hotkey-overlay-title=null { spawn-sh "rofi -show drun"; }
+    Mod+Shift+P allow-when-locked=true hotkey-overlay-title=null { spawn-sh "sh /home/nicodev/.config/niri/scripts/hyprPicker.sh"; }
 
     // Example volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.
@@ -264,8 +282,10 @@ binds {
     // or do a four-finger swipe up on a touchpad.
     Mod+SPACE repeat=false { toggle-overview; }
     Mod+E {spawn "nautilus";}
+    Mod+B {spawn "vivaldi";}
 
     Mod+Q repeat=false { close-window; }
+    Mod+Shift+Q {spawn-sh "qs -c noctalia-shell ipc call sessionMenu lockAndSuspend";}
 
     Mod+Left  { focus-column-left; }
     Mod+Down  { focus-window-down; }
@@ -486,5 +506,5 @@ binds {
 
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
-    Mod+Shift+P { power-off-monitors; }
+    // Mod+Shift+P { power-off-monitors; }
 }
