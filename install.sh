@@ -123,6 +123,7 @@ case $hypr_res in
       cp -r niri/* $HOME/.config;
       sudo cp -rf theme/.icons/* /usr/share/icons;
       sudo cp -rf theme/.themes/* /usr/share/themes;
+      sudoi cp -rf walls/* ~/Pictures
       gsettings set org.gnome.desktop.interface font-name 'Sans 9'
 
       # Check and set Zsh as the default shell
