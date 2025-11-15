@@ -134,10 +134,10 @@ layout {
     }
 }
 
-
 spawn-sh-at-startup "vicinae server"
 spawn-sh-at-startup "qs -c noctalia-shell"
-spawn-sh-at-startup "niri msg output DP-1 mode 2560x1440@179.999" 
+// spawn-sh-at-startup "niri msg output DP-1 mode 2560x1440@179.999" 
+spawn-sh-at-startup "niri msg output DP-1 mode 2560x1440@119.998"
 spawn-sh-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "hypridle"
 spawn-at-startup "xdg-desktop-portal-gtk"
@@ -225,6 +225,11 @@ window-rule {
 window-rule {
     geometry-corner-radius 20
     clip-to-geometry true
+}
+
+layer-rule {
+  match namespace="^noctalia-overview*"
+  place-within-backdrop true
 }
 
 layer-rule {
