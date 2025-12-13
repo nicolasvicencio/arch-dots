@@ -16,22 +16,27 @@ echo -e "${NONE}"
 # ------------------------------------------------------
 #thunar Check if yay is installed
 # ------------------------------------------------------
-echo -e "${NONE}"
-if sudo pacman -Qs yay > /dev/null ; then
-    echo "yay is already installed!"
-else
-    echo "yay is not installed. Will be installed now!"
-    _installPackagesPacman "base-devel"
-    SCRIPT=$(realpath "$0")
-    temp_path=$(dirname "$SCRIPT")
-    echo $temp_path
-    git clone https://aur.archlinux.org/yay-git.git ~/yay-git
-    cd ~/yay-git
-    makepkg -si
-    cd $temp_path
-    echo "yay has been installed successfully."
-fi
-echo ""
+# echo -e "${NONE}"
+# if sudo pacman -Qs yay > /dev/null ; then
+#     echo "yay is already installed!"
+# else
+#     echo "yay is not installed. Will be installed now!"
+#     _installPackagesPacman "base-devel"
+#     SCRIPT=$(realpath "$0")
+#     temp_path=$(dirname "$SCRIPT")
+#     echo $temp_path
+#     git clone https://aur.archlinux.org/yay-git.git ~/yay-git
+#     cd ~/yay-git
+#     makepkg -si
+#     cd $temp_path
+#     echo "yay has been installed successfully."
+# fi
+# echo ""
+
+sudo pacman -S --needed base-devel
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
 
 
 #Update repos
@@ -115,16 +120,10 @@ case $hypr_res in
   * ) 
       echo -e "\n Installing niri packages";
 
-     yay -S niri xdg-desktop-portal-gtk xdg-desktop-portal-gnome xdg-desktop-portal xwayland-satellite udiskie noctalia-shell cliphist matugen-git cava wlsunset ddcutil vicinae vivaldi fastfetch zsh bat lsd python-pip npm pnpm github-cli p7zip btop man vlc kitty imagewriter onlyoffice-bin rustup eog polkit-gnome krita flatpak bazaar zed qbittorrent spotify spotify-adblock audacity zathura zathura-pdf-mupdf android-studio-bin bluez bluez-utils sane hplip hplip-plugin mesa gnome-text-editor ly nautilus simple-scan hyprpicker lazygit dysk git wget btop fzf pulseaudio-alsa lib32-libpulse lib32-alsa-plugins hypridle nwg-look
-     yay -S noto-fonts-emoji otf-san-francisco-mono ttf-iosevka-nerd ttf-jetbrains-mono-nerd ttf-font-awesome noto-fonts-cjk
+     paru -S niri xdg-desktop-portal-gtk xdg-desktop-portal-gnome xdg-desktop-portal xwayland-satellite udiskie noctalia-shell cliphist matugen-git cava wlsunset ddcutil vicinae vivaldi fastfetch zsh bat lsd python-pip npm pnpm github-cli p7zip btop man vlc kitty imagewriter onlyoffice-bin rustup eog polkit-gnome krita flatpak bazaar zed qbittorrent spotify spotify-adblock audacity zathura zathura-pdf-mupdf android-studio-bin bluez bluez-utils sane hplip hplip-plugin mesa gnome-text-editor nautilus simple-scan hyprpicker lazygit dysk git wget btop fzf pulseaudio-alsa lib32-libpulse lib32-alsa-plugins hypridle nwg-look
+     paru -S noto-fonts-emoji apple-fonts ttf-iosevka-nerd ttf-jetbrains-mono-nerd ttf-font-awesome noto-fonts-cjk
 
 
-      #Get configs
-      cp -r niri/* $HOME/.config;
-      sudo cp -rf theme/.icons/* /usr/share/icons;
-      sudo cp -rf theme/.themes/* /usr/share/themes;
-      sudoi cp -rf walls/* ~/Pictures
-      gsettings set org.gnome.desktop.interface font-name 'Sans 9'
 
       # Check and set Zsh as the default shell
       [[ "$(awk -F: -v user="$USER" '$1 == user {print $NF}' /etc/passwd) " =~ "zsh " ]] || chsh -s $(which zsh)
@@ -143,7 +142,6 @@ case $hypr_res in
 
       # Enabling Bluetooth
       sudo systemctl enable bluetooth.service
-      sudo systemctl enable ly.service
 
       cp -rf .local/share/bin ~/.local/share
       # Apply Zsh config
@@ -153,6 +151,13 @@ case $hypr_res in
      wget https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn/hosts
      wait
      sudo mv hosts /etc/hosts
+
+     #Get configs
+     cp -r niri/* $HOME/.config;
+     sudo cp -rf theme/.icons/* /usr/share/icons;
+     sudo cp -rf theme/.themes/* /usr/share/themes;
+     sudoi cp -rf walls/* ~/Pictures
+     gsettings set org.gnome.desktop.interface font-name 'Sans 9'
 
      git config --global user.name "Nicolas Vicencio"
      git config --global user.email "nicolas.vicencio.or@gmail.com"
