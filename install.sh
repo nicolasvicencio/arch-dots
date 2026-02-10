@@ -16,28 +16,22 @@ echo -e "${NONE}"
 # ------------------------------------------------------
 #thunar Check if yay is installed
 # ------------------------------------------------------
-# echo -e "${NONE}"
-# if sudo pacman -Qs yay > /dev/null ; then
-#     echo "yay is already installed!"
-# else
-#     echo "yay is not installed. Will be installed now!"
-#     _installPackagesPacman "base-devel"
-#     SCRIPT=$(realpath "$0")
-#     temp_path=$(dirname "$SCRIPT")
-#     echo $temp_path
-#     git clone https://aur.archlinux.org/yay-git.git ~/yay-git
-#     cd ~/yay-git
-#     makepkg -si
-#     cd $temp_path
-#     echo "yay has been installed successfully."
-# fi
-# echo ""
-
-sudo pacman -S --needed base-devel
-git clone https://aur.archlinux.org/paru.git
-cd paru
-makepkg -si
-
+ echo -e "${NONE}"
+ if sudo pacman -Qs yay > /dev/null ; then
+     echo "yay is already installed!"
+ else
+     echo "yay is not installed. Will be installed now!"
+     _installPackagesPacman "base-devel"
+     SCRIPT=$(realpath "$0")
+     temp_path=$(dirname "$SCRIPT")
+     echo $temp_path
+     git clone https://aur.archlinux.org/yay-git.git ~/yay-git
+     cd ~/yay-git
+     makepkg -si
+     cd $temp_path
+     echo "yay has been installed successfully."
+ fi
+ echo ""
 
 #Update repos
 echo "Remember update your packages repositories"
@@ -52,6 +46,24 @@ case $upd_res in
       break;;
     * ) 
       yay -Syyu
+      
+      yay -S zsh
+       # Check and set Zsh as the default shell
+      [[ "$(awk -F: -v user="$USER" '$1 == user {print $NF}' /etc/passwd) " =~ "zsh " ]] || chsh -s $(which zsh)
+
+      # Install Oh My Zsh
+      if [ ! -d ~/.oh-my-zsh/ ]; then
+        sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended 
+      else
+        omz update
+      fi
+
+      # Install Zsh plugins
+      git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+      git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+      git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+
       break;;
 esac
 done
@@ -120,8 +132,8 @@ case $hypr_res in
   * ) 
       echo -e "\n Installing niri packages";
 
-     paru -S niri xdg-desktop-portal-gtk xdg-desktop-portal-gnome xdg-desktop-portal xwayland-satellite udiskie noctalia-shell cliphist matugen-git cava wlsunset ddcutil vicinae vivaldi fastfetch zsh bat lsd python-pip npm pnpm github-cli p7zip btop man vlc kitty imagewriter onlyoffice-bin rustup eog polkit-gnome krita flatpak bazaar zed qbittorrent spotify spotify-adblock audacity zathura zathura-pdf-mupdf android-studio-bin bluez bluez-utils sane hplip hplip-plugin mesa gnome-text-editor nautilus simple-scan hyprpicker lazygit dysk git wget btop fzf pulseaudio-alsa lib32-libpulse lib32-alsa-plugins hypridle nwg-look
-     paru -S noto-fonts-emoji apple-fonts ttf-iosevka-nerd ttf-jetbrains-mono-nerd ttf-font-awesome noto-fonts-cjk
+     yay -S niri xdg-desktop-portal-gtk xdg-desktop-portal-gnome xdg-desktop-portal xwayland-satellite udiskie noctalia-shell cliphist matugen-git cava wlsunset ddcutil vicinae vivaldi fastfetch zsh bat lsd python-pip npm pnpm github-cli p7zip btop man vlc kitty imagewriter onlyoffice-bin rustup eog polkit-gnome krita flatpak bazaar zed qbittorrent spotify spotify-adblock audacity zathura zathura-pdf-mupdf android-studio-bin bluez bluez-utils sane hplip hplip-plugin mesa gnome-text-editor nautilus simple-scan hyprpicker lazygit dysk git wget btop fzf pulseaudio-alsa lib32-libpulse lib32-alsa-plugins hypridle nwg-look
+     yay -S noto-fonts-emoji apple-fonts ttf-iosevka-nerd ttf-jetbrains-mono-nerd ttf-font-awesome noto-fonts-cjk
 
 
 
