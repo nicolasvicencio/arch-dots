@@ -77,7 +77,7 @@ input {
 
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 10
+    gaps 5
     
     always-center-single-column
 
@@ -134,7 +134,7 @@ layout {
     }
 }
 
-spawn-sh-at-startup "vicinae server"
+// spawn-sh-at-startup "vicinae server"
 spawn-sh-at-startup "qs -c noctalia-shell"
 // spawn-sh-at-startup "niri msg output DP-1 mode 2560x1440@179.999" 
 spawn-sh-at-startup "niri msg output DP-1 mode 2560x1440@119.998"
@@ -272,7 +272,9 @@ binds {
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
     // For example, this is a standard bind to toggle the screen reader (orca).
-    Mod+D allow-when-locked=true hotkey-overlay-title=null { spawn-sh "vicinae toggle"; }
+    Mod+D allow-when-locked=true hotkey-overlay-title=null { spawn-sh "qs -c noctalia-shell ipc call launcher toggle "; }
+    Mod+x allow-when-locked=true hotkey-overlay-title=null { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"; }
+    Mod+z allow-when-locked=true hotkey-overlay-title=null { spawn-sh "qs -c noctalia-shell ipc call launcher emoji"; }
     // Mod+D allow-when-locked=true hotkey-overlay-title=null { spawn-sh "rofi -show drun"; }
     Mod+Shift+P allow-when-locked=true hotkey-overlay-title=null { spawn-sh "sh /home/nicodev/.config/niri/scripts/hyprPicker.sh"; }
 
@@ -300,10 +302,12 @@ binds {
     Mod+Q repeat=false { close-window; }
     Mod+Shift+Q {spawn-sh "qs -c noctalia-shell ipc call sessionMenu lockAndSuspend";}
 
-    Mod+Left  { focus-column-left; }
+    // Mod+Left  { focus-column-left; }
+    Mod+1 { focus-column-left; }
     Mod+Down  { focus-window-down; }
     Mod+Up    { focus-window-up; }
     Mod+Right { focus-column-right; }
+    Mod+2 { focus-column-right; }
     Mod+H     { focus-column-left; }
     Mod+J     { focus-window-down; }
     Mod+K     { focus-window-up; }
@@ -414,9 +418,9 @@ binds {
     //
     // For example, with 2 workspaces + 1 empty, indices 3, 4, 5 and so on
     // will all refer to the 3rd workspace.
-    Mod+1 { focus-workspace 1; }
-    Mod+2 { focus-workspace 2; }
-    Mod+3 { focus-workspace 3; }
+    Mod+F1 { focus-workspace 1; }
+    Mod+F2 { focus-workspace 2; }
+    Mod+F3 { focus-workspace 3; }
     Mod+4 { focus-workspace 4; }
     Mod+5 { focus-workspace 5; }
     Mod+6 { focus-workspace 6; }
@@ -521,3 +525,6 @@ binds {
     // moving the mouse or pressing any other key.
     // Mod+Shift+P { power-off-monitors; }
 }
+
+include "./noctalia.kdl"
+
