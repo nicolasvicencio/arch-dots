@@ -166,6 +166,7 @@ case $hypr_res in
 
      #Get configs
      cp -r niri/* $HOME/.config;
+     sudo cp usr/share/applications/* /usr/share/applications/
      sudo cp -rf theme/.icons/* /usr/share/icons;
      sudo cp -rf theme/.themes/* /usr/share/themes;
      sudo cp -rf walls/* ~/Pictures
