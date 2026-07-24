@@ -132,7 +132,7 @@ case $hypr_res in
   * ) 
       echo -e "\n Installing niri packages";
 
-     yay -S niri xdg-desktop-portal-gtk xdg-desktop-portal-gnome xdg-desktop-portal xwayland-satellite udiskie noctalia-shell cliphist matugen-git cava wlsunset ddcutil vicinae vivaldi fastfetch zsh bat lsd python-pip npm pnpm github-cli p7zip btop man vlc kitty imagewriter onlyoffice-bin rustup eog polkit-gnome flatpak bazaar zed qbittorrent spotify spotify-adblock audacity zathura zathura-pdf-mupdf android-studio-bin bluez bluez-utils sane hplip hplip-plugin mesa gnome-text-editor nautilus simple-scan hyprpicker lazygit dysk git wget btop fzf pulseaudio-alsa lib32-libpulse lib32-alsa-plugins nwg-look
+     yay -S niri xdg-desktop-portal-gtk xdg-desktop-portal-gnome xdg-desktop-portal xwayland-satellite udiskie noctalia-git cliphist matugen-git cava wlsunset ddcutil fastfetch zsh bat lsd python-pip npm pnpm github-cli p7zip btop man cellulloid kitty imagewriter onlyoffice-bin rustup eog polkit-gnome flatpak bazaar zed qbittorrent spotify spotify-adblock bluez bluez-utils sane hplip hplip-plugin mesa gnome-text-editor nautilus hyprpicker lazygit dysk git wget btop fzf pulseaudio-alsa lib32-libpulse lib32-alsa-plugins nwg-look
      yay -S noto-fonts-emoji apple-fonts ttf-iosevka-nerd ttf-jetbrains-mono-nerd ttf-font-awesome noto-fonts-cjk ttf-ms-fonts
 
 
@@ -169,7 +169,7 @@ case $hypr_res in
      sudo cp usr/share/applications/* /usr/share/applications/
      sudo cp -rf theme/.icons/* /usr/share/icons;
      sudo cp -rf theme/.themes/* /usr/share/themes;
-     sudo cp -rf walls/* ~/Pictures
+     sudo cp -rf walls/* ~/Pictures/
      gsettings set org.gnome.desktop.interface font-name 'Sans 9'
 
      git config --global user.name "Nicolas Vicencio"
